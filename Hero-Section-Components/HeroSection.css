@@ -1,0 +1,524 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: #E0F2F1; /* Soft pastel blue background */
+  color: #333333; /* Dark gray text color */
+}
+
+/* Dark mode */
+body[data-theme="dark"] {
+  background-color: #272626; /* Dark background */
+  color: #ffffff; /* White text color */
+}
+
+/* Navbar styles */
+.navbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #e0f2f1; /* Light mode navbar background */
+  color: #333333; /* Light mode navbar text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="dark"] .navbar {
+  background-color: #333333; /* Dark mode navbar background */
+  color: #ffffff; /* Dark mode navbar text color */
+}
+
+/* Dark-Light Mode Button */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC; /* Light blue slider background */
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.input:checked + .slider {
+  background-color: #183153; /* Dark blue slider background in dark mode */
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInFromBottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+#landingPage {
+  animation: fadeIn 1s ease-in-out;
+}
+
+#enterSiteButton {
+  animation: slideInFromBottom 1s ease-in-out;
+}
+
+/* Landing Page styles */
+.landing-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  color: #333333; /* Dark gray text color */
+  text-align: center;
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+}
+
+.brand-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.landing-page h1 {
+  margin-top: 0;
+  font-size: 2.5em;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.landing-page p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+#enterSiteButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #28a745; /* Green button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#enterSiteButton:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Top Picks section */
+.top-picks {
+  padding: 20px;
+}
+
+.top-picks h2 {
+  text-align: center;
+}
+
+/* Indian States and Top Destinations sections */
+/* Indian States and Top Destinations sections */
+.indian-states,
+.top-dest,
+.footer {
+  margin: 10px;
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #f5f5dc; /* Light background with transparency */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body[data-theme="dark"] .indian-states,
+body[data-theme="dark"] .top-dest, 
+body[data-theme="dark"] .footer{
+background-color: rgba(70, 70, 70, 0.8); /*Dark background with transparency */
+  color: #000000; /* White text color */
+}
+
+body[data-theme="dark"] .indian-states h3,
+body[data-theme="dark"] .top-dest h3, 
+body[data-theme="dark"] .footer h3{
+
+  color: #ffffff; /* White text color */
+}
+
+
+.indian-states h3,
+.top-dest h3,
+.footer h3 {
+  margin: 10px 0px 5px 12px;
+}
+
+.cities,
+.countries {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.city,
+.intr {
+  flex: 0 0 25%;
+  padding: 0px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #e0f2f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.city:hover,
+.intr:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.city img,
+.intr img {
+  height: 80%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.scroll-buttons,
+.scroll-buttons-intr {
+  position: absolute;
+  top: 35px; 
+  transform: translateY(-50%); 
+  right: 30px;
+}
+
+body[data-theme="dark"] .scroll-left,
+body[data-theme="dark"] .scroll-right,
+body[data-theme="dark"] .scroll-leftIntr,
+body[data-theme="dark"] .scroll-rightIntr{
+  border: 1px solid white;
+}
+
+.scroll-left,
+.scroll-right,
+.scroll-leftIntr,
+.scroll-rightIntr {
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.scroll-left {
+  left: 0;
+}
+
+.scroll-right {
+  right: 0;
+}
+
+.scroll-leftIntr {
+  left: 0;
+}
+
+.scroll-rightIntr {
+  right: 0;
+}
+
+/* Airlines */
+.footer {
+  max-height: 250px;
+  margin: 0px 30px 30px 30px;
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #f5f5dc; /* Light blue-green background color */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.airlines-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.airlines-list {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.airlines-list li {
+  list-style: none;
+  margin: 10px;
+}
+
+.airlines-list img {
+  width: 150px;  /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the square without distortion */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%); /* Scroll halfway to account for the duplicated images */
+  }
+}
+
+.dom-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* btn */
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 0px 3px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: #9ee5fa;
+  background: #353535;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 #353535;
+  transition: all 0.3s ease;
+}
+
+.btn-content:hover,
+.btn-content:focus {
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 #353535;
+}
+
+.btn-content .icon-arrow {
+  transform: scale(0.6);
+  transition: all 0.3s ease;
+}
+
+/* Next Button Specific Styles */
+/* .next .btn-content:hover .icon-arrow {
+  margin-right: 15px; 
+} */
+
+.next .icon-arrow {
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+
+.next #arrow-icon-one,
+.next #arrow-icon-two {
+  transform: none; /* Disable transform for next button icons */
+}
+
+.next .btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.next .btn-content:hover #arrow-icon-one {
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.next .btn-content:hover #arrow-icon-two {
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* Back Button Specific Styles */
+.back .btn-content:hover .icon-arrow {
+  margin-left: 0px; /* Adjust margin as needed */
+}
+
+.back .icon-arrow {
+  margin-right: 15px;
+  position: relative;
+  top: 6%;
+}
+
+.back #arrow-icon-one-back,
+.back #arrow-icon-two-back {
+  transform: none; /*Disable transform for back button icons  */
+}
+
+.back .btn-content:hover #arrow-icon-three-back {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.back .btn-content:hover #arrow-icon-one-back {
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.back .btn-content:hover #arrow-icon-two-back {
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* Common SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #353535;
+  }
+  100% {
+    fill: #9ee5fa;
+  }
+}
+
+
+
+.package-info {
+  position: absolute;
+  bottom: 70px; /* Adjust the position as needed */
+  left: 10px;
+  background-color: rgb(0, 102, 255);
+  font-family: 'calibri';
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.price {
+  bottom: 10px;
+  left: 10px;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.intr p,
+.city p {
+  margin: 10px 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.info{
+  display: flex;
+}
+
+.info-price{
+  width: 50%;
+}
+
+.info-price p{
+  font-size: 17px;
+  font-family: 'candara';
+  font-weight: 500;
+  margin: 0px;
+}
+
+.info-place{
+  display:block;
+  width: 50%;
+}
+
+.info-place p{
+  font-size: 22px;
+  font-family: 'candara';
+  font-weight: bold;
+}
