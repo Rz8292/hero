@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrapplTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0066cc;
+            --light-blue: #e6f2ff;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Poppins', sans-serif;
+            height: 100%;
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .hero {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(135deg, var(--light-blue), var(--white));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            text-align: center;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-blue);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        .hero h1:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .hero p {
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            margin-bottom: 25px;
+            color: var(--primary-blue);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-decoration: none;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-blue);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 15px;
+            background: var(--white);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            width: calc(50% - 15px);
+            max-width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 102, 204, 0.1);
+            cursor: pointer;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 102, 204, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover .feature-icon {
+            transform: scale(1.2);
+        }
+
+        .feature h3 {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .feature p {
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            color: var(--primary-blue);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .feature {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+
+        .wave .shape-fill {
+            fill: var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>GrapplTech</h1>
+            <p>Innovative web solutions for the future</p>
+            <a href="#" class="cta-button">Get Started</a>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Web Components</h3>
+                    <p>Custom elements</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Internships</h3>
+                    <p>Launch your career</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Open Source</h3>
+                    <p>GitHub projects</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>Join our network</p>
+                </div>
+            </div>
+        </div>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.feature').forEach(feature => {
+            feature.addEventListener('mouseenter', () => {
+                feature.style.backgroundColor = '#e6f2ff';
+            });
+            feature.addEventListener('mouseleave', () => {
+                feature.style.backgroundColor = '#ffffff';
+            });
+        });
+    </script>
+</body>
+</html>
+
