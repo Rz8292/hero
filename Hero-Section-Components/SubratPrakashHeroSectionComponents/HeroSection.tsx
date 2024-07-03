@@ -6,7 +6,7 @@ import DoctorHero from '@/assets/img/DoctorHero.jpg';
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center bg-blue-100 p-8">
+    <div className="flex flex-col-reverse md:flex-row items-center bg-blue-150 p-8">
       <div className="w-full md:w-1/2 text-center md:text-left">
         <h1 className="text-4xl font-bold mb-4">Your Health, Our Responsibility</h1>
         <h2 className="text-2xl mb-2">Book Your Doctors Appointment Easily</h2>
