@@ -1,0 +1,168 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading{
+    text-align: center;
+    font-size: 24px;
+    
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    width: 50%;
+}
+.readb{
+    background-color: #607d8b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 25px;
+    text-decoration: none;
+}
+#link{
+    text-decoration: none;
+    color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dee4e7;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #263238;
+    color: white;
+}
+button{
+    right: 10px;
+    padding: 3px;
+     
+    top: 10px;
+    float: right;
+    position: fixed;
+}
+#logo{
+    width: 50px;
+    margin-top: -5px;
+    position: absolute;
+}
+#dtech{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.iot,.ml{
+    width: 250px;
+    background-color: #455a64;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+}
+.ai{
+    width: 250px;
+    background-color: #90a4ae;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+}
+#imgs{
+    width: 250px;
+    height: 180px;
+    
+}
+.para{
+    text-align: justify;
+}
+a:link{
+    color: orange;
+}
+.footer{
+    margin-top: 25px;
+    background-color: #222;
+    padding: 30px 50px 0px 50px;
+    color:  #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    
+}
+.footer-flex{
+    display: flex;
+    flex-direction: row;
+    
+}
+#divl{
+    width: 405px;
+    font-size: 20px;
+}
+#divr{
+    width: 405px;
+    text-align: end;
+    font-size: 20px;
+}
+address{
+    margin-top: -15px;
+}
+#rights{
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .image img {
+        width: 80%;
+    }
+
+    .readb {
+        text-align: center;
+    }
+
+    #logo {
+        width: 40px;
+        margin-top: 0;
+    }
+
+    button {
+        right: 5px;
+        top: 5px;
+        padding: 5px;
+    }
+
+    .iot, .ml, .ai {
+        
+        margin: 10px 0;
+    }
+    #imgs {
+        
+        height: auto;
+    }
+
+    /* Flex container adjustment */
+    #dtech {
+        flex-direction: column;
+    }
+    #divl,#divr{
+        width: 296px;
+        text-align: left;
+    }
+    .footer-flex{
+        flex-direction: column;
+    }
+    #rights{
+        margin-top: 50px;
+    }
+}
