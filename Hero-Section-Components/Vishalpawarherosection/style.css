@@ -1,0 +1,248 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: pink;
+    --second-bg-color: #011627;
+    --text-color: rgb(189, 26, 36);
+    --main-color: rgb(80, 2, 2);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: url('images/bg.png') no-repeat center center fixed; /* Add background image */
+    background-size: cover;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+#minicircle {
+	transition: all cubic-bezier(0.19,1,0.22,1) 1s;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	z-index: 99999;
+	border-radius: 50%;
+	background-color: #c11212;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+}
+
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .flip-icon {
+    margin-left: 1rem;
+}
+
+.flip-icon {
+     width: 4rem; /* Adjust size as needed */
+    height: 4rem; /* Maintain aspect ratio */
+    margin-left: 1rem; /* Space between the logo and the icon */
+    animation: flip 2s infinite;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    flex-direction: column; /* Center the content vertically */
+}
+
+.home-content {
+    max-width: 80rem;
+    z-index: 101; /* Ensure text is in front */
+    position: relative;
+    text-align: center; /* Center-align the text */
+    margin-top: 4rem; /* Adjust margin to move text up */
+    padding-top: 25rem; /* Adjust padding to move text up */
+}
+
+.main-heading {
+    color: --main-color;
+    font-size: 3rem; /* Adjust the size as needed */
+    text-align: center; /* Center-aligns the text */
+    margin: 2rem 0 1rem;
+    position: sticky;
+    white-space: nowrap; /* Ensures the text does not wrap */
+    top: 8rem;
+    z-index: 99;
+}
+.main-heading-part1,
+.main-heading-part2 {
+    display: inline-block;
+    opacity: 0;
+    font-size: 3rem;
+    white-space: nowrap;
+    z-index: 101;
+    position: relative;
+}
+
+.main-heading-part1.animate {
+    animation: slideInLeft 1s forwards;
+}
+
+.main-heading-part2.animate {
+    animation: slideInRight 1s forwards;
+}
+ 
+.sub-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: --main-color;
+    margin-top: 3rem;
+    opacity: 0; 
+    transition: opacity 3s ease;
+}
+
+/* Styles for search option in navbar */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 3.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#search-icon {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.search-input {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0; /* Align to the right */
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--main-color);
+    border-radius: 0.5rem;
+    transition: width 0.3s;
+}
+
+.search-container.active .search-input {
+    display: inline-block;
+    width: 15rem;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+/* Responsive Adjustments */
+@keyframes flip {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        margin-left: 1.5rem;
+    }
+    .search-input {
+        width: 12rem;
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
