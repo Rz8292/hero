@@ -1,0 +1,231 @@
+body {
+    background-image: url(fabio-fistarol-EOp1yOdj02A-unsplash.jpg);
+    background-size: cover;
+    color: white;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav {
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#options {}
+
+a:link {
+    text-decoration: none;
+    margin: 0.4rem;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 110%;
+}
+
+.bt1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-style: solid;
+    border-color: white;
+    border-radius: 30px;
+    font-size: 100%;
+    padding: 0.4rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.272);
+    width: 100px;
+}
+
+.bt1:hover {
+    color: black;
+    background-color: rgba(255, 252, 252, 0.644);
+}
+
+#bt2 {
+    border-color: rgb(190, 190, 190);
+    width: 140px;
+    color: black;
+    border-color: rgb(123, 122, 122);
+    background-color: white;
+}
+
+#bt2:hover {
+    color: white;
+    background: none;
+    border-color: white;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.lhs {
+    display: flex;
+    flex-direction: row;
+}
+
+#ic1 {
+    font-size: 30px;
+    height: fit-content;
+    margin: 1rem;
+}
+
+.rhs {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+}
+
+#text {
+    background-color: rgba(255, 255, 255, 0.283);
+    border-radius: 20px;
+    margin-inline: 1rem;
+    text-align: right;
+    padding-inline: 1rem;
+    height: fit-content;
+}
+
+#socials {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.283);
+    border-radius: 10px;
+}
+
+#ic {
+    padding: 5px;
+    font-size: 20px;
+}
+
+#t1 {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.mid {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    font-size: x-large;
+}
+
+.bot {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    flex-wrap: wrap;
+}
+
+.bts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.bt3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-style: solid;
+    border-color: white;
+    border-radius: 30px;
+    margin: 0.3rem;
+    font-size: medium;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.272);
+}
+
+.botr {
+    height: fit-content;
+    text-align: right;
+    margin: 1rem;
+}
+
+a {
+    color: white;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 110%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.272);
+}
+
+.show {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .row1 {
+        flex-direction: column;
+    }
+
+    .rhs {
+        font-size: 12px;
+    }
+
+    .mid {
+        font-size: large;
+        text-align: center;
+    }
+
+    .bot {
+        flex-direction: column;
+    }
+
+    .bts {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bt1, .bt2, .bt3 {
+        width: 100%;
+        max-width: none;
+        margin: 0.5rem 0;
+    }
+}
