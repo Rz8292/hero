@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div id="tit"><h1>Gaskuy!</h1></div>
+            <div id="options">
+                <!-- <a href="">Tours</a> -->
+                <div class="dropdown">
+                    <button onmouseover="myFunction()" class="dropbtn">Tours</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="">USA</a>
+                      <a href="">Europe</a>
+                      <a href="">Dubai</a>
+                    
+                    </div>
+                  </div>
+                <a href="">About Us</a>
+                <a href="">Gallery</a>
+                <a href="">Blog</a>
+                <a href="">Contact</a>
+            </div>
+            <div id="login">
+                <button class="bt1">Login</button>
+                <button class="bt1" id="bt2" >Sign Up</button>
+            </div>
+        </div>
+        <div class="row1">
+        <div class="lhs">
+            <i id="ic1"class="fa-solid fa-users"></i>
+            <p>| 50k have used our services</p>
+        </div>
+
+        <div class="rhs">
+            <div id="text">
+                <h3>Want travelling?</h3>
+                <p>This activity involves the movement of people<br>from one location to another, domestically or<br>internationally, <a>Visit more</a></p>
+            </div>
+            <div id="socials">
+                <i class="fa-brands fa-instagram" id="ic"></i>
+                <i class="fa-brands fa-facebook-f" id="ic"></i>
+                <i class="fa-brands fa-linkedin-in"id="ic"></i>
+                <i class="fa-brands fa-twitter"id="ic"></i>
+            </div>
+        </div>
+</div>
+        <div class="mid">
+            <h1>Crafting <mark id="t1">Journerys</mark><br>Not <mark id="t1">Just</mark> Trips.</h1>
+        </div>
+        <div class="bot">
+        <div class="botl">
+            <h4>The facilities we provide:</h4>
+            <div class="bts">
+            <button class="bt3">Tour Guide</button>
+            <button class="bt3">Travel Packages</button>
+            <button class="bt3">Accomodation</button>
+            <button class="bt3">Transportation</button>
+            <button class="bt3">Food</button>
+            <button class="bt3">Insurance</button>
+            <button class="bt3">Online Ordering</button>
+</div>
+        </div>
+
+        <div class="botr">
+            <button class="bt1" id="bt2" >Consulation</button>
+            <p>Conselling is a process in which individuals can talk about problems, difficulties, or<br>
+                feelings they are facing with a trained professional</p>
+        </div>
+</div>
+    
+    </div>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+</body>
+</html>
