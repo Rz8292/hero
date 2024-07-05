@@ -1,0 +1,176 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100dvh;
+    background-color: #cce5ff;
+    background-image: linear-gradient(162deg, #a9d0f9 0%, #f4e8ff 100%);
+    gap: 2rem;
+}
+
+.Home::-webkit-scrollbar {
+    width: 10px;
+}
+.Home::-webkit-scrollbar-track {
+  background: #dbdada;
+  border-radius: 10px;
+}
+.Home::-webkit-scrollbar-thumb {
+  background: #91b4ff;
+  border-radius: 10px;
+}
+.Home::-webkit-scrollbar-thumb:hover {
+  background: #84a0f2;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1.5rem;
+    width: 90vw;
+    border-radius: 10px;
+    font-size: large;
+    margin-top: 20px;
+}
+
+nav{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+nav img{
+    height: 2.5rem;
+}
+
+.nav-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-div ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-div li,.nav-div h3{
+    padding: .5rem;
+}
+
+li{
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+li:hover{
+    color: rgb(25, 121, 255);
+    transition: .5s;
+}
+
+.home-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+    width: 85vw;
+    padding: 1.5rem;
+}
+
+.home-div img{
+    height: 30rem;
+}
+
+.text-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text-div p{
+    width: 90%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .Home{
+        height: auto;
+    }
+    header{
+        padding: 1rem;
+        width: 80vw;
+    }
+
+    nav img{
+        height: 2rem;
+    }
+    .nav-div-mob{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 18.5rem;
+        margin-right: -1rem;
+        width: 10rem;
+        padding: 1rem;
+        background-color: #84a0f2;
+    }
+
+    .nav-div-mob.open{
+        margin-right: 7rem;
+        animation: move-in .5s ease-in;
+    }
+    
+    .nav-div-mob ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: medium;
+    }
+    @keyframes move-in{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+    /* css for landing page */
+    .home-div{
+        flex-direction: column;
+        height: 80%;
+        width: 100vw;
+        padding: 1.5rem;
+    }
+
+    .home-div img{
+        height: 20rem;
+    }
+
+    .text-div{
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .text-div p{
+        font-size: large;
+    }
+}
