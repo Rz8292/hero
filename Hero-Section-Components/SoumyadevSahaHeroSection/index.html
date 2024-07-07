@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Animate.css for animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Carz | Soumyadev</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  </head>
+  <body>
+    <!-- Background Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Header Section -->
+    <header class="header" id="header">
+      <nav class="navbar container">
+        <!-- Brand/Logo -->
+        <a href="#" class="brand animate__animated animate__fadeIn animate__slow">🚘&ensp;CARZ</a>
+        <!-- Burger Menu for mobile view -->
+        <div class="burger" id="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
+        <!-- Navigation Menu -->
+        <div class="menu animate__animated animate__fadeInDown" id="menu">
+          <ul class="menu-inner">
+            <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Models</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Dealers</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
+          </ul>
+        </div>
+        <!-- Call-to-Action Link -->
+        <a href="#" class="animate__animated animate__tada animate__slow menu-block ">Discover</a>
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle animate__animated animate__rotateIn animate__slow" id="theme-toggle">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main">
+      <!-- Banner Section -->
+      <section class="section banner banner-section">
+        <div class="container banner-column">
+          <!-- Banner Image -->
+          <img
+            class="banner-image animate__animated animate__rotateIn animate__slow"
+            src="./assets/car.png"
+            alt="banner"
+          />
+          <div class="banner-inner">
+            <!-- Headline -->
+            <h1 class="heading-xl animate__animated animate__zoomInDown animate__slow">Drive the Future with Our Latest Models</h1>
+            <!-- Subheadline -->
+            <p class="paragraph animate__animated animate__zoomInUp animate__slow">
+              Experience the pinnacle of automotive innovation. Our cars combine cutting-edge technology with unparalleled performance and luxury, delivering a driving experience like no other.
+            </p>
+            <!-- Call-to-Action Button -->
+            <div class="animate__animated animate__zoomIn animate__slow">
+              <button class="btn btn-darken btn-inline ">
+                <i class="fa fa-car"></i> Explore More
+              </button>
+            </div>
+          </div>
+          <!-- Social Media Links -->
+          <div class="banner-links animate__animated animate__bounceInUp animate__slow">
+            <a href="#" title=""><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title=""><i class="fab fa-instagram"></i></a>
+            <a href="#" title=""><i class="fab fa-twitter"></i></a>
+            <a href="#" title=""><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer animate__animated animate__fadeIn animate__slow">
+      Made with ❤️ by&ensp;<a href="https://github.com/SoumyadevSaha" rel="noreferrer" target="_blank" class="portfolio"> Soumyadev's Creations</a>&ensp;&copy; 2024
+    </footer>
+
+    <!-- Particle.js script -->
+    <script type="text/javascript" src="particles.js"></script>
+    <!-- App script for theme toggle and other interactions -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Custom script -->
+    <script type="text/javascript" src="script.js"></script>
+
+    <!-- Email : soumyadev1912@gmail.com
+    Name : Soumyadev Saha 
+    For GrapplTech Community Built Web Components -->
+  </body>
+</html>
