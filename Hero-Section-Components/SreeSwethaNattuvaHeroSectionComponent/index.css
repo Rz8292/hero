@@ -1,0 +1,226 @@
+body {
+    margin: auto;
+    text-decoration: none;
+    background-image: url('bg_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #030329;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+}
+
+.navbar-nav {
+    display: flex;
+    margin-right: 0;
+    align-items: center;
+    margin-top: 0;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+
+#logo {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    display: inline-flex;
+}
+
+.nav-logo {
+    text-decoration: none;
+    font-family: "Allerta", sans-serif;
+    font-weight: 800;
+    color: #60d3db;
+    font-size: x-large;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    
+}
+
+.nav-item {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F7F7F7;
+    font-family: "Actor", sans-serif;
+    font-size: 16px;
+    margin-right: 40px;
+}
+
+.nav-link:hover {
+    color: #60d3db;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    color: #F7F7F7;
+    font-size: 1.5rem;
+}
+
+/* Intro-card section */
+.intro-card {
+    background-color: #b26df1;
+    font-family: "Actor", sans-serif;
+    margin-top: 100px;
+    height: 300px;
+    width: 35%;
+    text-align: left;
+    padding-left: 40px;
+    display: inline-block;
+    align-items: center;
+}
+
+h1 {
+    color: #F7F7F7;
+    font-size: 50px;
+    margin-top: auto;
+    height: 60px;
+    font-family: "Allerta", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    align-items: center;
+}
+
+#services-h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #030329;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-family: "Actor", sans-serif;
+}
+
+.intro-margin {
+    width: 1%;
+    height: 300px;
+    background-color: #030329;
+    position: absolute;
+    display: inline;
+    margin-top: 100px;
+}
+
+/* learn more button */
+.learn-btn {
+    height: 40px;
+    width: 120px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-family: "Allerta", sans-serif;
+    color: #030329;
+}
+
+.learn-btn:hover {
+    background-color: #60d3db;
+    color: #F7F7F7;
+}
+
+.footer-bar {
+    background-color: #030329;
+    border-radius: 5px;
+    height: 10%;
+    width: 100%;
+}
+
+/* Media Queries for small screens */
+@media (max-width: 992px) {
+    .navbar-toggler {
+        display: block;
+        background-color: #030329;
+        align-self: flex-end;
+        margin-right: 10px;
+    }
+    .nav-logo{
+        background-color: #030329;
+    }
+
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .navbar-nav.show {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .intro-card {
+        width: 80%;
+        text-align: center;
+    }
+   
+    .navdiv {
+        justify-content: space-between;
+        background-color: #030329;
+        position: relative;
+
+
+    }
+
+    /* Ensure the hamburger icon remains in place */
+    .navbar-nav.show {
+        align-items: center;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 387px){
+    
+    .intro-card{
+        height: 400px;
+        justify-content: center;
+        padding-left: 0;
+        width: 90%;
+    }
+    .intro-margin{
+        height: 400px;
+    }
+
+    h1{
+        
+       margin-top: 20px; 
+    }
+        h2{
+        margin-top: 60px;
+    }
+
+
+
+}
+
