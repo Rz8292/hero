@@ -6,42 +6,42 @@ const pizzaData = [
   {
     name: "Pizza Pepperoni",
     ingredients: "with tomato sauce, beef pepperoni, mozzarella cheese.",
-    price: 6,
+    price: 239,
     photoName: "pizzas/pepproni.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato and mozarella",
-    price: 10,
+    price: 119,
     photoName: "pizzas/margherita.jpg",
     soldOut: false,
   },
   {
     name: "Pizza BBQ Meatlovers ",
     ingredients: "beef, Italian sausage, smoky honey ham, rich BBQ sauce & mozzarella",
-    price: 12,
+    price: 419,
     photoName: "pizzas/bbq.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Chicken Italiano ",
     ingredients: "Chicken Sausage, Chicken Pepperoni, Mushroom, Capsicum & Black Olive",
-    price: 12,
+    price: 349,
     photoName: "pizzas/chicken.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Super Supreme",
     ingredients: "Pepperoni, Italian sausage, ham, mild sausage, beef topping, green pepper, sliced mushrooms, red onion",
-    price: 15,
+    price: 229,
     photoName: "pizzas/supreme.jpg",
     soldOut: true,
   },
   {
     name: "Pizza Veggie Lover",
     ingredients: "tomato sauce, mushrooms, pineapples, tomatoes, capsicums, onions, mozzarella cheese.",
-    price: 18,
+    price: 199,
     photoName: "pizzas/veggie.jpg",
     soldOut: false,
   },
@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Navbar /> 
+      <Navbar />
       <Menu />
       <Footer />
     </div>
@@ -72,12 +72,11 @@ function Menu() {
 
   return (
     <main className="menu">
-      <h2>Our menu</h2>
+      <h2>Top Menu</h2>
       {numPizzas > 0 ? (
         <>
           <p>
-            Authentic Italian cuisine. 6 creative dishes to choose from. All
-            from our stone oven, all organic, all delicious.
+          Craving Comfort? Our Pizza is the Perfect Match. Order Now! ❤️
           </p>
           <ul className="pizzas">
             {pizzas.map((pizza) => (
@@ -108,8 +107,8 @@ function Pizza({ pizzaObj }) {
 
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
+  const openHour = 10 ;
+  const closeHour = 20;
   const isOpen = hour >= openHour && hour <= closeHour;
 
   return (
