@@ -21,6 +21,7 @@
   text-decoration: none;
   padding: 1rem 2rem;
   font-size: 1.8rem;
+  letter-spacing: 2px;
   transition: color 0.3s ease;
 }
 
@@ -31,7 +32,7 @@
 .dropdown {
   display: none;
   position: absolute;
-  background-color: #444;
+  background-color: #e4e4e4;
   min-width: 160px;
   z-index: 1;
   list-style: none;
@@ -39,6 +40,7 @@
   margin: 0;
   top: 100%;
   left: 0;
+  border-radius: 5px;
 }
 
 .navbar-item:hover .dropdown {
@@ -52,15 +54,15 @@
 }
 
 .dropdown li:hover {
-  background-color: #555;
+  background-color: #d0d0d0;
 }
 
 .dropdown li a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .dropdown li:hover a {
-  color: #edc84b;
+  color: #ec0000;
 }

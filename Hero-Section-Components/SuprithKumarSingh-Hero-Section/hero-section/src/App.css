@@ -14,7 +14,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #000000;
   font-weight: 400;
-  background-color: #e9e9e9;
+  background-color: #e7e7e7;
   border-bottom: 1.6rem solid #ffffff;
   min-height: 100vh;
   padding: 3.2rem;
@@ -37,20 +37,22 @@ body {
 }
 
 .header h1 {
-  color: #edc84b;
+  color: #fcce25;
   text-transform: uppercase;
   text-align: center;
   font-size: 5.2rem;
-  font-weight: 300;
+  text-shadow: 0 0 3px #000000, 0 0 5px #3333ff;
+  font-weight: 700;
   letter-spacing: 3px;
   position: relative;
   width: 100%;
   display: block;
   transition: color 0.3s ease;
+  cursor:grabbing;
 }
 
 .header h1:hover {
-  color: #af8602;
+  color: #e5b001;
 }
 
 .header h1::before,
@@ -59,7 +61,7 @@ body {
   content: "";
   height: 3px;
   width: 4rem;
-  background-color: #edc84b;
+  background-color: #000000;
   position: absolute;
   top: calc(50% - 1px);
 }
@@ -71,8 +73,6 @@ body {
 .header h1::after {
   right: 0;
 }
-
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -146,20 +146,10 @@ body {
   font-size: 1.6rem;
 }
 
-.pizza.sold-out {
-  color: #888;
-}
-
-.pizza.sold-out img {
-  filter: grayscale();
-  opacity: 0.8;
-}
-
-
 .pizza .btn.add {
   color: inherit;
   font-family: inherit;
-  border: 1px solid #edc84b;
+  border: 1.5px solid #edc84b;
   font-size: 1.4rem;
   font-weight: 500;
   background-color: transparent;
@@ -198,7 +188,8 @@ body {
 }
 
 .btn:hover {
-  background-color: #e9bb24;
+  background-color: transparent;
+  border: 3px solid #edc84b;
 }
 
 
