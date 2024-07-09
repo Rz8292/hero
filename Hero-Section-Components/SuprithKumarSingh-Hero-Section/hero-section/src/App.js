@@ -8,42 +8,36 @@ const pizzaData = [
     ingredients: "with tomato sauce, beef pepperoni, mozzarella cheese.",
     price: 239,
     photoName: "pizzas/pepproni.jpg",
-    soldOut: false,
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato and mozarella",
     price: 119,
     photoName: "pizzas/margherita.jpg",
-    soldOut: false,
   },
   {
     name: "Pizza BBQ Meatlovers ",
     ingredients: "beef, Italian sausage, smoky honey ham, rich BBQ sauce & mozzarella",
     price: 419,
     photoName: "pizzas/bbq.jpg",
-    soldOut: false,
   },
   {
     name: "Pizza Chicken Italiano ",
     ingredients: "Chicken Sausage, Chicken Pepperoni, Mushroom, Capsicum & Black Olive",
     price: 349,
     photoName: "pizzas/chicken.jpg",
-    soldOut: false,
   },
   {
     name: "Pizza Super Supreme",
     ingredients: "Pepperoni, Italian sausage, ham, mild sausage, beef topping, green pepper, sliced mushrooms, red onion",
     price: 229,
     photoName: "pizzas/supreme.jpg",
-    soldOut: true,
   },
   {
     name: "Pizza Veggie Lover",
     ingredients: "tomato sauce, mushrooms, pineapples, tomatoes, capsicums, onions, mozzarella cheese.",
     price: 199,
     photoName: "pizzas/veggie.jpg",
-    soldOut: false,
   },
 ];
 
@@ -75,9 +69,7 @@ function Menu() {
       <h2>Top Menu</h2>
       {numPizzas > 0 ? (
         <>
-          <p>
-          Craving Comfort? Our Pizza is the Perfect Match. Order Now! ❤️
-          </p>
+          <p>Craving Comfort? Our Pizza is the Perfect Match. Order Now! ❤️</p>
           <ul className="pizzas">
             {pizzas.map((pizza) => (
               <Pizza pizzaObj={pizza} key={pizza.name} />
@@ -85,7 +77,7 @@ function Menu() {
           </ul>
         </>
       ) : (
-        <p>We're still working on our menu. Please come back later :)</p>
+        <p>Working on pizzas for YOU.</p>
       )}
     </main>
   );
@@ -93,12 +85,12 @@ function Menu() {
 
 function Pizza({ pizzaObj }) {
   return (
-    <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
+    <li className="pizza">
       <img src={pizzaObj.photoName} alt={pizzaObj.name} />
       <div>
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
-        <span>{pizzaObj.soldOut ? "SOLD OUT" : `Rs. ${pizzaObj.price}`}</span>
+        <span>Rs. {pizzaObj.price}</span>
         <button className="btn add">Add</button>
       </div>
     </li>
@@ -107,7 +99,7 @@ function Pizza({ pizzaObj }) {
 
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 10 ;
+  const openHour = 10;
   const closeHour = 20;
   const isOpen = hour >= openHour && hour <= closeHour;
 
@@ -116,9 +108,7 @@ function Footer() {
       {isOpen ? (
         <Order closeHour={closeHour} openHour={openHour} />
       ) : (
-        <p>
-          We're happy to welcome you between {openHour}:00 and {closeHour}:00.
-        </p>
+        <p>We are currently closed. Please Order between {openHour}:00 and {closeHour}:00.</p>
       )}
     </footer>
   );
@@ -127,10 +117,8 @@ function Footer() {
 function Order({ closeHour, openHour }) {
   return (
     <div className="order">
-      <p>
-        We're open from {openHour}:00 to {closeHour}:00. Come visit us or order
-        online.
-      </p>
+      <p>We're open from {openHour}:00 to {closeHour}:00.</p>
+      <p>Order NOW!</p>
       <button className="btn">Order</button>
     </div>
   );

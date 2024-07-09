@@ -14,7 +14,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #000000;
   font-weight: 400;
-  background-color: #e7e7e7;
+  background-color: #f2f2f2;
   border-bottom: 1.6rem solid #ffffff;
   min-height: 100vh;
   padding: 3.2rem;
@@ -48,7 +48,7 @@ body {
   width: 100%;
   display: block;
   transition: color 0.3s ease;
-  cursor:grabbing;
+  cursor: pointer;
 }
 
 .header h1:hover {
@@ -78,6 +78,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  font-weight: bold;
 }
 
 .menu h2 {
@@ -88,7 +89,7 @@ body {
   font-size: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .menu > p {
@@ -131,7 +132,7 @@ body {
 
 .pizza h3 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .pizza p {
@@ -156,6 +157,7 @@ body {
   padding: 0.8rem 1.6rem;
   cursor: pointer;
   transition: all 0.2s;
+  width: 150px;
 }
 
 .pizza .btn.add:hover {
@@ -166,6 +168,7 @@ body {
 
 .footer {
   font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .order {
