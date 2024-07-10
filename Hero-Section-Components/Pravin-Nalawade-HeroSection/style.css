@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Pacifico', cursive;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: #282c34;
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.container img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-text {
+  width: 60%;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff7e5f;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.hero-text .coffee {
+  color: #ff7e5f;
+  font-weight: bold;
+}
+
+.hero-text .code {
+  color:gray;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff7e5f;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #feb47b;
+  color: #ffffff;
+  border: 2px solid #ff7e5f;
+}
+
+/* Media queries */
+
+@media (max-width: 884px) {
+  .container {
+      margin-top: 10px;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-text {
+      width: 100%;
+  }
+
+  .hero-text h1 {
+      font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 678px) {
+  .hero-text h1 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 428px) {
+  nav ul {
+      display: none;
+  }
+
+  .logo {
+      text-align: center;
+      width: 100%;
+  }
+}
