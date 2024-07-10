@@ -1,8 +1,12 @@
-const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.getElementById('nav-list');
+// script.js
 
-mobileMenu.addEventListener('click', () => {
-    const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
-    mobileMenu.setAttribute('aria-expanded', !isExpanded);
-    navList.classList.toggle('active');
+const darkModeToggle = document.getElementById('dark-mode-toggle-checkbox');
+const body = document.body;
+
+darkModeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+    }
 });
