@@ -54,8 +54,9 @@ _**3.Hero Section:-**_
 
 -> Details Included: Product name, image, price, and a brief description.
 
-**Responsiveness**<br>
-The entire hero section, including the navbar and its components, is designed to be responsive.<br>
+**Responsiveness**
+
+The entire hero section, including the navbar and its components, is designed to be responsive.
 
 ->Mobile View:
 
