@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-hero-section",
   "version": "0.1.0",
-  "homepage": "https://dhvani365.github.io/DhvaniMaktuporiaHeroSection/ecommerce-hero-section",
+  "homepage": "https://dhvani365.github.io/GrapplTech-Community-Built-Web-Components/DhvaniMaktuporiaHeroSection",
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

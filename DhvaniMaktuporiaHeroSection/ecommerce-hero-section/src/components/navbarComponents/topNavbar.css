@@ -40,8 +40,20 @@
 .dropdown {
     margin-left: 0%;
 }
+.dropdown-menu-custom {
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto;
+}
+.dropdown-menu-custom.closed {
+    height: 0 !important;
+    visibility: hidden !important;
+}
 
-.dropdown .dropdown-toggle {
+.dropdown-menu-custom.open {
+    height: 200px !important;
+    visibility: visible !important;
+}
+/* .dropdown .dropdown-toggle {
     background-color: #1B6392;
     color: white;
     border: none;
@@ -50,7 +62,7 @@
 
 .dropdown .dropdown-toggle::after {
     border-top-color: white;
-}
+} */
 
 .dropdown .dropdown-menu {
     background-color: white;

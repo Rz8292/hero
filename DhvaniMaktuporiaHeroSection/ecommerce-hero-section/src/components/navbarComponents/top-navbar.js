@@ -5,6 +5,8 @@ function TopNavbar(){
     // fetching APIs of languges and currency
     const [languages, setLanguages] = useState([]);
     const [currencies, setCurrencies] = useState([]);
+    const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+    const [showCurrencyDropdown, setShowCurrencyDropdown] = useState(false);
 
     useEffect(() => {
         // Fetch languages from API
@@ -55,6 +57,14 @@ function TopNavbar(){
             console.error('Error fetching currencies:', error);
         }
     };
+
+    const handleLanguageDropdownToggle = (isOpen) => {
+        setShowLanguageDropdown(isOpen);
+    };
+
+    const handleCurrencyDropdownToggle = (isOpen) => {
+        setShowCurrencyDropdown(isOpen);
+    };
     return(
         <>
             <div className='top-navbar'>
@@ -100,21 +110,36 @@ function TopNavbar(){
                         </div>
                         {/* drop downs */}
                         {/* Language Dropdown */}
-                        <DropdownButton id="dropdown-language" title="Language" className='dropdown'>
-                            {languages.map((lang) => (
-                                <Dropdown.Item key={lang.code} href="#">{lang.name}</Dropdown.Item>
-                            ))}
+                        <DropdownButton
+                            id="dropdown-language"
+                            title="Language"
+                            className='dropdown'
+                            // show={showLanguageDropdown}
+                            onClick={() => handleLanguageDropdownToggle(!showLanguageDropdown)}
+                        >
+                            <div className={`dropdown-menu-custom ${showLanguageDropdown ? 'open' : 'closed'}`}>
+                                {languages.map((lang) => (
+                                    <Dropdown.Item key={lang.code} href="#">{lang.name}</Dropdown.Item>
+                                ))}
+                            </div>
                         </DropdownButton>
                         {/* Currency Dropdown */}
-                        <DropdownButton id="dropdown-currency" title="Currency" className='dropdown'>
-                            {currencies.map((currency) => (
-                                <Dropdown.Item key={currency.symbol} href="#">{currency.name}</Dropdown.Item>
-                            ))}
+                        <DropdownButton
+                            id="dropdown-currency"
+                            title="Currency"
+                            className='dropdown'
+                            // show={showCurrencyDropdown}
+                            onClick={() => handleCurrencyDropdownToggle(!showCurrencyDropdown)}
+                        >
+                             <div className={`dropdown-menu-custom ${showCurrencyDropdown ? 'open' : 'closed'}`}>
+                                {currencies.map((currency) => (
+                                    <Dropdown.Item key={currency.symbol} href="#">{currency.name}</Dropdown.Item>
+                                ))}
+                            </div>
                         </DropdownButton>
             </div>
-
         </>
-    )
+    );
 }
 
 export default TopNavbar;
