@@ -1,0 +1,19 @@
+let a="rgb(112, 14, 203)";let b="rgb(186, 135, 234)";
+document.getElementById("button1").addEventListener("click",()=>{
+    document.getElementById("button1").style.backgroundColor=a;
+    document.getElementById("button2").style.backgroundColor=b;
+    document.getElementById("button3").style.backgroundColor=b;
+}
+);
+document.getElementById("button2").addEventListener("click",()=>{
+    document.getElementById("button1").style.backgroundColor=b;
+    document.getElementById("button2").style.backgroundColor=a;
+    document.getElementById("button3").style.backgroundColor=b;
+}
+);
+document.getElementById("button3").addEventListener("click",()=>{
+    document.getElementById("button1").style.backgroundColor=b;
+    document.getElementById("button2").style.backgroundColor=b;
+    document.getElementById("button3").style.backgroundColor=a;
+}
+);
