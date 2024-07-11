@@ -19,15 +19,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: DhvaniMaktuporiaHeroSection/ecommerce-hero-section
+        working-directory: GrapplTech-Community-Built-Web-Components/DhvaniMaktuporiaHeroSection/ecommerce-hero-section
 
       - name: Build
         run: npm run build
-        working-directory: DhvaniMaktuporiaHeroSection/ecommerce-hero-section
+        working-directory: GrapplTech-Community-Built-Web-Components/DhvaniMaktuporiaHeroSection/ecommerce-hero-section
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.2
         with:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: DhvaniMaktuporiaHeroSection/ecommerce-hero-section/build
+          FOLDER: GrapplTech-Community-Built-Web-Components/DhvaniMaktuporiaHeroSection/ecommerce-hero-section/build
