@@ -16,7 +16,7 @@ html {
     width: 100%;
     height: 100vh;
     background:linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.304)), url('./1097928.jpg') no-repeat center / cover;
-    color: aliceblue;
+    color: rgb(240, 248, 255);
 }
 
 .container {
@@ -105,4 +105,8 @@ html {
     float: right;
     background-color: rgba(100, 252, 100, 0.45);
     color: white;
+  }
+  .topnav a:hover.split  {
+    background-color: #ddd;
+    color: black;
   }
