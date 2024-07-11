@@ -17,20 +17,17 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Navigate to ecommerce-hero-section directory
-        run: cd ecommerce-hero-section
-
       - name: Install dependencies
         run: npm install
-        working-directory: ecommerce-hero-section
+        working-directory: DhvaniMaktuporiaHeroSection/ecommerce-hero-section
 
       - name: Build
         run: npm run build
-        working-directory: ecommerce-hero-section
+        working-directory: DhvaniMaktuporiaHeroSection/ecommerce-hero-section
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.2
         with:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: ecommerce-hero-section/build
+          FOLDER: DhvaniMaktuporiaHeroSection/ecommerce-hero-section/build
