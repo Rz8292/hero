@@ -1,16 +1,17 @@
 **Ecommerce Website Hero section**<br><br>
-**Overview**<br>
+**Overview**
+
 This documentation provides a detailed explanation of the e-commerce website hero section template. The template is designed to be attractive and responsive, featuring a multi-layered navbar, a sale tag, and a hero section with a carousel and product information cards.
 
 **Features**
 
-_1. Sale Tag:-_
+_**1. Sale Tag:-**_
 
 -> Description: A tag displayed at the top of the navbar to highlight ongoing sales.
 
 -> Functionality: Can be closed by clicking the "X" button. Once closed, it remains hidden until the page is refreshed.
 
-_2. Navbar:-_
+_**2. Navbar:-**_
 
 -> Structure: The navbar is divided into three parts:
 
@@ -39,7 +40,7 @@ _2. Navbar:-_
 -Contact Information: Displays the owner's contact details.
 
 
-_3.Hero Section:-_
+_**3.Hero Section:-**_
 
 (i)Carousel:-
 
@@ -55,6 +56,7 @@ _3.Hero Section:-_
 
 **Responsiveness**<br>
 The entire hero section, including the navbar and its components, is designed to be responsive.<br>
+
 ->Mobile View:
 
 -The layout adjusts to fit smaller screens.
