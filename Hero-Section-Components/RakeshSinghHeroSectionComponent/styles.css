@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.gifts img {
+    width: 50%;
+    border-radius: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.birthday {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.birthday-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.birthday-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.birthday-content {
+    flex: 2;
+}
+
+.birthday h1 {
+    font-size: 36px;
+    padding: 5px;
+    text-align: center;
+}
+
+.birthday p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.birthday-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.birthday-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.birthday-content ul li {
+    margin-bottom: 5px;
+}
+
