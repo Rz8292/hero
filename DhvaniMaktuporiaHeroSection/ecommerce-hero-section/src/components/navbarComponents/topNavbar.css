@@ -1,0 +1,99 @@
+.top-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1B6392;
+    color: white;
+    font-size: 16px;
+    padding: 1% 10%;
+}
+
+.top-navbar p {
+    margin: 0;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+
+.social-media p {
+    margin: 0 10px 0 0;
+}
+
+.social-media-btn {
+    background: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.social-media-btn svg {
+    color: white;
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown {
+    margin-left: 0%;
+}
+
+.dropdown .dropdown-toggle {
+    background-color: #1B6392;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+.dropdown .dropdown-toggle::after {
+    border-top-color: white;
+}
+
+.dropdown .dropdown-menu {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.dropdown .dropdown-item {
+    color: black;
+}
+
+.dropdown .dropdown-item:hover {
+    background-color: #185985;
+    color: white;
+}
+@media (max-width: 768px) {
+    .top-navbar {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top-navbar p {
+        font-size: 14px;
+    }
+    
+    .social-media {
+        display: flex;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .follow-p {
+        display: none;
+    }
+    
+    .social-media-btn svg {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .dropdown {
+        display: none;
+    }
+
+}
