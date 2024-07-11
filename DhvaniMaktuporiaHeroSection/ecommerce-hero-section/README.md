@@ -1,4 +1,4 @@
-**Ecommerce Website Hero section**<br>
+**Ecommerce Website Hero section**<br><br>
 **Overview**<br>
 This documentation provides a detailed explanation of the e-commerce website hero section template. The template is designed to be attractive and responsive, featuring a multi-layered navbar, a sale tag, and a hero section with a carousel and product information cards.
 
@@ -35,8 +35,8 @@ _3.Hero Section:-_
 -> Description: Two cards displaying detailed information about specific products.
 -> Details Included: Product name, image, price, and a brief description.
 
-**Responsiveness**
-The entire hero section, including the navbar and its components, is designed to be responsive.
+**Responsiveness**<br>
+The entire hero section, including the navbar and its components, is designed to be responsive.<br>
 ->Mobile View:
 -The layout adjusts to fit smaller screens.
 -The dropdown menus and sign-in form are optimized for touch interaction.
