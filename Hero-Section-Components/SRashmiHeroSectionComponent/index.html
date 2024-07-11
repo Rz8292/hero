@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+         header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Align items horizontally */
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav {
+        margin-right: 500px;
+      font-size: 22px;
+      text-align: center; /* Center align the nav items */
+      width: 60%; /* Adjust nav width */
+      animation: slideInNav 1s ease-out forwards; /* Apply slideInNav animation */
+      opacity: 0;
+      animation-delay: 0.5s; /* Delay animation for stagger effect */
+    }
+    @keyframes slideInNav {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Move nav up by 50px */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* Bring nav back to its original position */
+      }
+    }
+    nav a {
+        
+      text-decoration: none;
+      color: #50b498; /* Light green color for links */
+      font-size: 1.2em;
+      font-weight: 900;
+      letter-spacing: 3.5px;
+      padding: 10px 25px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease, transform 0.2s ease-out; /* Smooth transitions */
+      display: inline-block; /* Ensure links are inline */
+      transform-origin: center bottom; /* Set transform origin for scaling */
+      animation: slideUp 2s ease-out forwards; /* Apply slideUp animation */
+      opacity: 0;
+    }
+      body {
+        font-family: "Raleway", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #8ae9b3;
+        background-image: linear-gradient(1000deg, #8ae9b3 0%, #c8d6e5 74%);
+      }
+       
+      nav a:hover {
+        background-color: #b0ebb4; /* Light green with slight transparency on hover */
+        color: white; /* White text color on hover */
+      }
+      .logo {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 90px;
+        width: 90px;
+      }
+      .logo img {
+        width: 100%;
+        height: auto;
+      
+    
+      }
+
+.logo span {
+  letter-spacing: 4px;
+  margin-left: 6px;
+  font-size: 1.5em; /* Adjust font size */
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 10px; /* Push nav up a bit */
+}
+      
+      .content {
+        text-align: left;
+        padding: 5px 20px;
+        margin-top: 50px;
+      }
+      .content h1 {
+        color: #333;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: 5em;
+        animation: fadeIn 1s ease-out forwards;
+        opacity: 0;
+      }
+      .content p {
+        font-size: 25px;
+        letter-spacing: 5px;
+        animation: slideUp 1s ease-out 0.5s forwards;
+        opacity: 0;
+        transform: translateY(20px);
+        margin-bottom: 20px;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #4caf50;
+        color: #ffffff;
+        font-size: 1.2em;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 30px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        border: none;
+        cursor: pointer;
+        animation: scaleIn 1s ease-out 1s forwards;
+        opacity: 0;
+      }
+      .cta-button:hover {
+        background-color: #8bc34a;
+        transform: scale(1.05);
+      }
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: all 0.5s ease-out;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        pointer-events: none;
+      }
+      .cta-button:hover::before {
+        width: 0;
+        height: 0;
+      }
+      .cta-button span {
+        position: relative;
+        z-index: 1;
+      }
+      .image-card {
+        text-align: center;
+        animation: slideInRight 1s ease-out forwards;
+        opacity: 0;
+    
+        margin-top: -550px;
+        margin-left: 1200px;
+        margin-right: 20px;
+      }
+      .image-card img {
+        width: 100%;
+        max-width: 700px;
+        border-radius: 10px;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes scaleIn {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .content h1 {
+          font-size: 3em;
+        }
+        .content p {
+          font-size: 20px;
+          letter-spacing: 3px;
+        }
+        .image-card img {
+          max-width: 500px;
+        }
+      }
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+        }
+        .logo {
+          margin-bottom: 10px;
+        }
+        nav {
+          font-size: 18px;
+        }
+        .content {
+          text-align: center;
+        }
+        .content h1 {
+          font-size: 2em;
+        }
+        .content p {
+          font-size: 18px;
+        }
+        .cta-button {
+          padding: 10px 20px;
+          font-size: 1em;
+        }
+        .image-card img {
+          max-width: 400px;
+        }
+      }
+      @media (max-width: 480px) {
+        nav a {
+          padding: 5px 10px;
+        }
+        .content h1 {
+          font-size: 1.5em;
+        }
+        .content p {
+          font-size: 16px;
+          letter-spacing: 2px;
+        }
+        .cta-button {
+          padding: 8px 16px;
+        }
+        .image-card img {
+          max-width: 300px;
+        }
+      }
+      /* Accessibility */
+      nav a:focus,
+      .cta-button:focus {
+        outline: 2px solid #42e99b;
+        outline-offset: 2px;
+      }
+      .hamburger-menu {
+       display: none; /* Initially hide on larger screens */
+       }
+
+#hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+    
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #50b498;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
+
+/* Styles for mobile view */
+@media (min-width: 400px ) and (max-width:1250px){
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav {
+    display: none; /* Hide nav by default on smaller screens */
+    position: absolute;
+    top: 60px; /* Adjust according to header height */
+    width: 50%;
+    height:100vh;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+nav {
+  display: none; /* Initially hide nav on smaller screens */
+  position: fixed;
+  top: 0;
+  right:auto;
+  left: auto; 
+  width: 50%;
+  height: 100vh;
+  background-color: #d5efe1; /* Add a background color for visibility */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+nav.open {
+  display: block;
+  animation: slideInNav 0.5s ease forwards;
+}
+@media (min-width: 200px) and (max-width: 300px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav {
+    display: none; /* Hide nav by default on smaller screens */
+    position: absolute;
+    top: 60px; /* Adjust according to header height */
+    width: 50%;
+    height:100vh;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+nav {
+  display: none; /* Initially hide nav on smaller screens */
+  position: fixed;
+  top: 0;
+  right:auto;
+  left: auto; 
+  width: 50%;
+  height: 100vh;
+  background-color: #d5efe1; /* Add a background color for visibility */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+nav.open {
+  display: block;
+  animation: slideInNav 0.5s ease forwards;
+}
+}
+
+
+@media (max-width: 1000px) {
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+  nav a {
+    display: block;
+    padding: 15px;
+ 
+    text-align: center;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+  <div class="logo">
+    <img src="images/logo.jpg" alt="Logo" />
+    <span style="color:rgb(31, 97, 66);">Yoga</span>
+  </div>
+
+  <div class="hamburger-menu">
+    <button id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#blogs">Blogs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+    <div class="content">
+      <h1>
+        <span>Find Peace </span><br />
+        <span>and Balance in</span><br />
+        <span>Your Life</span>
+      </h1>
+      <p>Discover tranquility and harmony.</p>
+      <p>Experience holistic wellness beyond physical exercise.</p>
+      <a href="#" class="cta-button"><span>Get Started</span></a>
+      <div class="image-card">
+        <img src="images/photo.jpg" alt="Yoga Image" /><br />
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', function () {
+    nav.classList.toggle('open');
+  });
+});
+
+  </script>
+</html>
