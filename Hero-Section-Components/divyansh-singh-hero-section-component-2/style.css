@@ -1,0 +1,294 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+    height: 200vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.281)), url('./pexels-pixabay-268533.jpg') repeat center / cover;
+    background-attachment: fixed;  /* Added this line */
+    background-position: bottom;
+    background-repeat: repeat-x;
+    color: rgba(240, 248, 255, 0.836);
+    overflow-x: hidden;
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.container .info {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.container .info h1 {
+    text-align: right;
+}
+
+.container .info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.container .info p {
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin: 0 0 0 auto;
+}
+
+.container .info button {
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    border-radius: 140px;
+    font-size: 1.5rem;
+    padding: 0.5em 2em;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: orange;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.container2 .midpara button {
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    border-radius: 140px;
+    font-size: 1.5rem;
+    padding: 0.5em 2em;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    color: orange;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.container .info button:hover,
+.topic-item:hover,
+.task:hover,
+.quick-task button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container .info button:active,
+.topic-item:active,
+.task:active,
+.quick-task button:active {
+    background-color: #004494;
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container2 .midpara button:hover,
+.topic-item:hover,
+.task:hover,
+.quick-task button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container2 .midpara button:active,
+.topic-item:active,
+.task:active,
+.quick-task button:active {
+    background-color: #004494;
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container2 .midpara {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.container2 .midpara p {
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.login-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    border: 2px solid rgba(240, 248, 255, 0.836);
+    color: rgba(240, 248, 255, 0.836);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.login-btn i {
+    font-size: 18px;
+}
+
+.login-btn:hover {
+    background-color: rgba(240, 248, 255, 0.836);
+    color: #0C2D48;
+    transform: scale(1.1);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+/* Animated Menu Button */
+.menu-btn {
+    position: relative;
+    top: 1px;
+    left: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: rgba(240, 248, 255, 0.836);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+    color: #0C2D48;
+}
+
+.menu-btn:active {
+    transform: scale(0.9);
+    color: #0C2D48;
+}
+
+#social-media {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social:hover {
+    transform: scale(1.2);
+}
+
+.social.fb {
+    background-color: #3b5998;
+}
+
+.social.tw {
+    background-color: #1da1f2;
+}
+
+.social.ig {
+    background-color: #e4405f;
+}
+
+.social.li {
+    background-color: #0077b5;
+}
+
+
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: transparent; /* Transparent background */
+    color: black; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    font-size: 24px; /* Increase font size */
+    transition: transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    transform: scale(1.2);
+}
