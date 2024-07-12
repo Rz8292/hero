@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikhil Sharma Portfolio Hero Section</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark-mode">
+    <div class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">I'm a Software Developer</h1>
+      </div>
+      <button id="toggleMode">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"
+          />
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M14 13.08V6c0-.55-.45-1-1-1s-1 .45-1 1v7.08c-.55.15-1 .61-1 1.17 0 .69.56 1.25 1.25 1.25s1.25-.56 1.25-1.25c0-.56-.45-1.02-1-1.17zm2.85-2.2l1.15-1.15c.2-.2.2-.51 0-.71s-.51-.2-.71 0l-1.15 1.15c-.35-.26-.75-.46-1.18-.57l.37-.92c.09-.23.02-.49-.18-.68-.2-.2-.49-.27-.73-.18l-.92.37c-.11-.43-.31-.83-.57-1.18l-1.15-1.15c-.2-.2-.51-.2-.71 0s-.2.51 0 .71l1.15 1.15c-.26.35-.46.75-.57 1.18l-.92.37c-.23.09-.49.02-.68-.18-.2-.2-.27-.49-.18-.73l.37-.92c-.43-.11-.83-.31-1.18-.57l-1.15 1.15c-.2.2-.51.2-.71 0s-.2-.51 0-.71l1.15-1.15c.26-.35.46-.75.57-1.18l.92-.37c.23-.09.49-.02.68.18.2.2.27.49.18.73l-.37.92c.43.11.83.31 1.18.57zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="about-me">
+      <div class="about-me-content">
+        <h2>About Me</h2>
+        <p style="text-align: justify">
+          Hi, I'm Nikhil Sharma, a Full Stack Developer. I have been working in
+          the tech industry for almost 2 years. I love creating websites and
+          applications that help people in their daily lives. I am passionate
+          about learning new technologies and sharing my knowledge with others.
+        </p>
+        <div class="about-me-buttons">
+          <button id="openSocialOverlay">My Socials</button>
+          <button id="openProjectsOverlay">My Projects</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="socialOverlay">
+      <span class="close">&times;</span>
+      <div class="overlay-content">
+        <h2>Let's Connect</h2>
+        <div class="social-images">
+          <a href="https://github.com/NikhilCode12" target="_blank">
+            <img src="./assets/github.png" alt="github" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nikhil-sharma-41a287226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+          >
+            <img src="./assets/linkedin.png" alt="linkedin" />
+          </a>
+          <a href="mailto:sharmanikhil12jv@gmail.com" target="_blank">
+            <img src="./assets/gmail.png" alt="gmail" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="projectsOverlay">
+      <span class="close">&times;</span>
+      <div class="overlay-content">
+        <h2>My Projects</h2>
+        <div class="project-slider">
+          <a href="https://msit-management.vercel.app/" target="_blank"
+            ><img
+              src="./assets//MSITManagementAdmission.PNG"
+              alt="MSITManagementAdmission"
+              class="image-project"
+          /></a>
+          <a href="https://share-ease.vercel.app/" target="_blank"
+            ><img
+              src="./assets/ShareEase.PNG"
+              alt="ShareEase"
+              class="image-project"
+          /></a>
+          <a href="https://sharmanikhilportfolio3d.vercel.app/" target="_blank"
+            ><img
+              src="./assets/PortfolioNextjs.PNG"
+              alt="3dPortfolio"
+              class="image-project"
+          /></a>
+          <a href="https://nexty-chatbotver2.netlify.app/" target="_blank"
+            ><img
+              src="./assets/NextyChatbot.PNG"
+              alt="NextyChatbot"
+              class="image-project"
+          /></a>
+          <a href="https://smart-agro.vercel.app/" target="_blank"
+            ><img
+              src="./assets/SmartAgro.PNG"
+              alt="SmartAgro"
+              class="image-project"
+          /></a>
+          <a href="https://keep-it-here-umx8.vercel.app/" target="_blank"
+            ><img
+              src="./assets/KeepItHere.PNG"
+              alt="KeepItHere"
+              class="image-project"
+          /></a>
+          <a href="https://kidvocate.vercel.app/" target="_blank"
+            ><img
+              src="./assets/KIDVocate.PNG"
+              alt="KIDVocate"
+              class="image-project"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
