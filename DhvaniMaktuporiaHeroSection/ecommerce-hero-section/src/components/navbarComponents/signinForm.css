@@ -1,0 +1,110 @@
+.signin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .signin-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 350px;
+    position: relative;
+    color: black;
+  }
+  .close-btn{
+    display: flex;  
+    border: none;
+    background-color: white;
+    cursor:auto;
+    margin-bottom: 5%;
+  }
+  .close-btn button{
+    position: absolute;
+    margin-top: 0px;
+    right: 10px;
+    background: none;
+    font-size: 16px;
+  }
+  .close-btn button:hover{
+    background-color: black;
+    color: white;
+  }
+  .signin-form{
+    margin-top: 5%;
+  }
+  .form-input{
+    width: 300px;
+    margin-top: 2%;
+    font-size: 14px;
+    height: 40px;
+    padding-left: 2%;
+  }
+  .signin-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    margin-top: 10px;
+  }
+  .signin-actions button{
+    border: none;
+    background-color: #FA8232;
+    margin-top: 5%;
+    height: 40px;
+    width: 100%;
+    color: white;
+  }
+  .signin-actions button:hover{
+    background-color: #fc6500;
+  }
+  .forgot-passwd{
+    text-decoration: none;
+    margin-left: 40%;
+  }
+  .create-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .create-account button {
+    background-color: white;
+    border: solid 1px #FA8232;
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+  }
+  .create-account button:hover{
+    transition: 0.5s;
+    background-color: #FA8232;
+    color: white;
+  }
+  .or-connect-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .or-connect-container hr {
+    flex: 1;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0 10px;
+  }
+  
+  .or-connect-container span {
+    white-space: nowrap;
+    color: #333;
+  }
+  

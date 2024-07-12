@@ -1,0 +1,116 @@
+/* top widget design */
+.top-sales-widget{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    background-color: #191C1F;
+    color: white;
+    width: 100%;
+    padding-top: 2%;
+}
+.sale-name{
+    margin-left: 10%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10%;
+}
+.sale-name .box{
+    background-color: #F3DE6D;
+    color: black;
+    padding: 15%;
+    margin-right: 15%;
+    font-size: 18px;
+    font-weight: bolder;    
+}
+.sale-disc{
+    margin-left: 15%;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 15%;
+    margin-top: 0%;
+}
+.sale-disc span{
+    font-size: 22px;
+    font-weight: 800;
+    color: #F3DE6D;
+}
+.shop-button {
+    background-color: #EBC80C; /* Yellow background color */
+    color: #000; /* Black text color */
+    border: none;
+    padding: 20px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Space between text and icon */
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2%;
+    margin-right: 10%;
+    margin-top: -1%;
+    height: 50px;
+}
+  
+.shop-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #000; /* Ensure the icon is black */
+}
+  
+.shop-button:hover {
+    background-color: #E6B800; /* Slightly darker yellow for hover effect */
+}
+
+.close-btn-top{
+    height: 80%;
+    border: none;
+    padding: 1%;
+    background-color: #303639;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: -0.5%;
+    margin-left: 5%;
+}
+
+@media (max-width:768px){
+    .top-sales-widget{
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+    }
+    .sale-name{
+        margin-left: 5%;
+        font-size: 10px;
+        font-weight: 500;
+        margin-right: 0%;
+    }
+    .sale-name .box{
+        margin-left: 2%;
+        padding: 2%;
+        margin-right: 2%;
+        font-size: 10px;
+        font-weight: bolder;    
+    }
+    .sale-disc{
+        margin-left: 15%;
+        font-size: 10px;
+        font-weight: 600;
+        margin-right: 15%;
+        margin-top: 0%;
+    }
+    .sale-disc span{
+        font-size: 12px;
+        font-weight: 800;
+    }
+    .shop-button {
+        display: none;
+    }
+    .close-btn-top{
+        margin-top: -0.5%;
+        margin-left: 15%;
+    }
+}

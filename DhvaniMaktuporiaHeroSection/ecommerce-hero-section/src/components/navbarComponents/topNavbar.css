@@ -1,0 +1,130 @@
+.top-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1B6392;
+    color: white;
+    font-size: 16px;
+    padding: 1% 10%;
+}
+
+.top-navbar p {
+    margin: 0;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+
+.social-media p {
+    margin: 0 10px 0 0;
+}
+
+.social-media-btn {
+    background: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.social-media-btn svg {
+    color: white;
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #1B6392;
+    height: 40px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .dropdown:after {
+    content: '▼';
+    margin-left: 5px;
+    font-size: 12px;
+    color: white;
+  }
+
+  /* Dropdone popup menu */
+
+  .dropdown-menu-custom {
+    display: none;
+    position: absolute; /* Position the dropdown menu absolutely within the parent */
+    background-color: #185985;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.dropdown-menu-custom.show {
+    display: block;
+}
+.dropdown-menu-custom .menu-item {
+    cursor: pointer;
+    white-space: nowrap;
+}
+.lang-menu{
+    top: 20%; /* Position the dropdown menu directly below the button */
+    left: 60%; /* Align the dropdown menu with the left edge of the button */
+    width: 15%; /* Ensure the dropdown menu has the same width as the button */    
+}
+.curr-menu{
+    top: 20%; /* Position the dropdown menu directly below the button */
+    left: 75%; /* Align the dropdown menu with the left edge of the button */
+    width: 10%; /* Ensure the dropdown menu has the same width as the button */    
+}
+.lang-menu-up{
+    top: 8%;
+    left: 60%;
+    width: 15%;
+}
+.curr-menu-up{
+    top: 8%;
+    left: 75%;
+    width: 10%;
+}
+@media (max-width: 768px) {
+    .top-navbar {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top-navbar p {
+        font-size: 14px;
+    }
+    
+    .social-media {
+        display: flex;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .follow-p {
+        display: none;
+    }
+    
+    .social-media-btn svg {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .dropdown {
+        display: none;
+    }
+
+}
