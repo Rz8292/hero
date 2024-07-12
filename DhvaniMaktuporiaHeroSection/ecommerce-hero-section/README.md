@@ -1,4 +1,10 @@
 **Ecommerce Website Hero section**<br><br>
+
+Video Link(Google Drive):- https://drive.google.com/file/d/1q3RGTE1ymTgLtikuORjYeC3UToIWMs4T/view?usp=drive_link
+
+Deployment Link:- https://dhvani-ecommerce-hero-section.netlify.app/
+
+
 **Overview**
 
 This documentation provides a detailed explanation of the e-commerce website hero section template. The template is designed to be attractive and responsive, featuring a multi-layered navbar, a sale tag, and a hero section with a carousel and product information cards.
