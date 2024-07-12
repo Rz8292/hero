@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DropdownButton, Dropdown } from 'react-bootstrap';
 import './topNavbar.css';
-function TopNavbar(){
+function TopNavbar({topWidgetVisibility}){
     // fetching APIs of languges and currency
     const [languages, setLanguages] = useState([]);
     const [currencies, setCurrencies] = useState([]);
@@ -110,34 +110,37 @@ function TopNavbar(){
                         </div>
                         {/* drop downs */}
                         {/* Language Dropdown */}
-                        <DropdownButton
-                            id="dropdown-language"
-                            title="Language"
-                            className='dropdown'
-                            // show={showLanguageDropdown}
-                            onClick={() => handleLanguageDropdownToggle(!showLanguageDropdown)}
-                        >
-                            <div className={`dropdown-menu-custom ${showLanguageDropdown ? 'open' : 'closed'}`}>
-                                {languages.map((lang) => (
-                                    <Dropdown.Item key={lang.code} href="#">{lang.name}</Dropdown.Item>
-                                ))}
-                            </div>
-                        </DropdownButton>
+                        <button className="dropdown" 
+                        onClick={()=>handleLanguageDropdownToggle(!showLanguageDropdown)}
+                        >Language</button>
+                            {showLanguageDropdown && (
+                                <div className={`dropdown-menu-custom show ${topWidgetVisibility ? 'lang-menu':'lang-menu-up'}`}>
+                                    {languages.map((lang) => (
+                                        <div className="menu-item" key={lang.code}>
+                                            {lang.name}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
                         {/* Currency Dropdown */}
-                        <DropdownButton
-                            id="dropdown-currency"
-                            title="Currency"
-                            className='dropdown'
-                            // show={showCurrencyDropdown}
-                            onClick={() => handleCurrencyDropdownToggle(!showCurrencyDropdown)}
-                        >
-                             <div className={`dropdown-menu-custom ${showCurrencyDropdown ? 'open' : 'closed'}`}>
-                                {currencies.map((currency) => (
+                        <button className="dropdown" 
+                        onClick={()=>handleCurrencyDropdownToggle(!showCurrencyDropdown)}
+                        >Currency</button>
+                            {showCurrencyDropdown && (
+                                <div className={`dropdown-menu-custom show ${topWidgetVisibility ? 'curr-menu':'curr-menu-up'}`}>
+                                    {currencies.map((currency) => (
+                                        <div className="menu-item" key={currency.symbol}>
+                                            {currency.name}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                        {/* {currencies.map((currency) => (
                                     <Dropdown.Item key={currency.symbol} href="#">{currency.name}</Dropdown.Item>
-                                ))}
-                            </div>
-                        </DropdownButton>
-            </div>
+                                ))} */}
+                </div>
         </>
     );
 }

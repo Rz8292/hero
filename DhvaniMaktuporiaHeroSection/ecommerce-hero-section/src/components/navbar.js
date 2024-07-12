@@ -5,17 +5,14 @@ import MiddleNavbar from './navbarComponents/middle-navbar.js';
 import BottomNavbar from './navbarComponents/bottom-navbar.js';
 import './navbar.css';
 
-function Navbar() {
+function Navbar({topWidget}) {
 
     return (
         <>
             {/* Main Container */}
             <div className='main-container'>
-                {/* top widget */}
-                <TopWidget/>
-
                 {/* second widget */}
-                <TopNavbar/>
+                <TopNavbar topWidgetVisibility={topWidget}/>
 
                 {/* middle navbar widget */}
                 <MiddleNavbar/>

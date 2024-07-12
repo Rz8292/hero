@@ -38,45 +38,64 @@
 }
 
 .dropdown {
-    margin-left: 0%;
-}
-.dropdown-menu-custom {
-    max-height: 200px; /* Adjust the height as needed */
-    overflow-y: auto;
-}
-.dropdown-menu-custom.closed {
-    height: 0 !important;
-    visibility: hidden !important;
-}
-
-.dropdown-menu-custom.open {
-    height: 200px !important;
-    visibility: visible !important;
-}
-/* .dropdown .dropdown-toggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     background-color: #1B6392;
+    height: 40px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .dropdown:after {
+    content: '▼';
+    margin-left: 5px;
+    font-size: 12px;
     color: white;
-    border: none;
-    padding: 5px 10px;
-}
+  }
 
-.dropdown .dropdown-toggle::after {
-    border-top-color: white;
-} */
+  /* Dropdone popup menu */
 
-.dropdown .dropdown-menu {
-    background-color: white;
-    color: black;
-    border: none;
-}
-
-.dropdown .dropdown-item {
-    color: black;
-}
-
-.dropdown .dropdown-item:hover {
+  .dropdown-menu-custom {
+    display: none;
+    position: absolute; /* Position the dropdown menu absolutely within the parent */
     background-color: #185985;
-    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.dropdown-menu-custom.show {
+    display: block;
+}
+.dropdown-menu-custom .menu-item {
+    cursor: pointer;
+    white-space: nowrap;
+}
+.lang-menu{
+    top: 20%; /* Position the dropdown menu directly below the button */
+    left: 60%; /* Align the dropdown menu with the left edge of the button */
+    width: 15%; /* Ensure the dropdown menu has the same width as the button */    
+}
+.curr-menu{
+    top: 20%; /* Position the dropdown menu directly below the button */
+    left: 75%; /* Align the dropdown menu with the left edge of the button */
+    width: 10%; /* Ensure the dropdown menu has the same width as the button */    
+}
+.lang-menu-up{
+    top: 8%;
+    left: 60%;
+    width: 15%;
+}
+.curr-menu-up{
+    top: 8%;
+    left: 75%;
+    width: 10%;
 }
 @media (max-width: 768px) {
     .top-navbar {
