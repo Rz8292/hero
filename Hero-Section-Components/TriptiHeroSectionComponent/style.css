@@ -171,8 +171,8 @@ html{
 
 .hero .slide{
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
     display: flex;
     align-items: center;
     justify-content: center;
