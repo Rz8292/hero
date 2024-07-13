@@ -1,0 +1,129 @@
+body {
+  background-image: url("images/Background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+  user-select: none;
+}
+
+.centered-paragraph {
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  /* animation: slideIn 2s ease; */
+  color: white; 
+  margin-right: 100px;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.myDiv {
+  background-color: rgba(0, 0, 0, 0.314); 
+  font-family: Arial, sans-serif;
+  text-align: start; 
+  padding: 20px;
+  position: absolute; 
+  bottom: 60px; 
+  right: 10px; 
+}
+
+.chess-piece {
+  font-size: 18px;
+  margin: 5px; 
+  /* animation: slideIn 2s ease; */
+  cursor: pointer; 
+  background-color: #007bff; 
+  color: white; 
+  padding: 8px 12px; 
+  border-radius: 4px; 
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap; 
+  justify-content: space-evenly; 
+}
+
+#button{
+  cursor: pointer; 
+  background-color: #007bff; 
+  color: white;
+  padding: 8px 12px; 
+  border-radius: 50%; 
+  padding: 10px;
+  justify-content: space-evenly; 
+  margin-right: 20px;
+  animation: slideIn 2s ease;
+}
+
+#button:hover {
+  background-color: #0071b3; 
+}
+
+.head{
+  margin: 20px;
+  color: red;
+}
+
+.span{
+  color: white;
+}
+
+.write {
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  color: skyblue;
+  opacity: .9;
+  margin-left: 40px;
+  letter-spacing: .15em; 
+  animation: typing 3.5s steps(40, end), blink-caret 6s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+.bottom-paragraph {
+  position: absolute;
+  bottom: 0;
+  color: gray;
+  opacity: 0.9;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  head {
+      font-size: 1.5rem;
+  }
+  .myDiv {
+      padding: 1rem;
+  }
+  body {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+
