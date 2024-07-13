@@ -1,0 +1,131 @@
+.head h1 {
+    font-family: "Saira Stencil One",sans-serif;
+    
+    font-family: "Calistoga", serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,#e9db1b,#f006f8,#f85c5c, #71ee8c, #0761e7, #f32d79);
+    -webkit-background-clip: text;
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 8s ease-in infinite;
+    font-size: 45px;
+    line-height: 1;
+    
+    }
+.head h6{
+
+    font-size: 0.9rem;
+}
+    
+    
+    @media(max-width:490px){
+      .head h1 {
+        font-size: 30px;
+      }
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+            background-size: 200% 200%;
+        }
+        25% {
+            background-position: 100% 0%;
+            background-size: 150% 150%;
+        }
+        50% {
+            background-position: 100% 100%;
+            background-size: 200% 200%;
+        }
+        75% {
+            background-position: 0% 100%;
+            background-size: 150% 150%;
+        }
+        100% {
+            background-position: 0% 50%;
+            background-size: 200% 200%;
+        }
+    }
+.hero-section {
+        background: linear-gradient(45deg,#1a202c,  #140a1a,#2e1833, #40024d);
+        height: 100%;
+        margin: 0;
+    }
+.head-text, .head-img{
+    padding: 2rem 0 2rem 0;
+}
+.text-justify {
+    text-align: justify;
+  }
+.btn-outline-secondary{
+ border: 1px solid white;
+ color: white;
+}
+.btn-outline-secondary:hover{
+    color: black;
+    background-color: white;
+}
+.navbar{
+    border-radius: 10rem;
+   margin-top: 1rem;
+   --bs-bg-opacity: 1;
+   z-index: 100;
+   background-image: linear-gradient(135deg, #31318b, #1c1c2c, #071669, #011031);
+   transition: background 1s ease-out;
+   font-weight: 500;
+}
+
+.navbar-nav{
+    left: 50%;
+}
+section{
+    height: 90vh;
+    padding-top: 5rem;
+    z-index: 2;
+}
+.mynavbar{
+    margin-bottom: 1.5rem;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:focus{
+    color: white;
+}
+a:hover,.nav-link:hover {
+    background: linear-gradient(165deg, #2525ee, #7113ec, #140124, #0f0116);
+    box-shadow: 4px 4px 6px rgba(194, 127, 250, 0.1);
+    color: white;
+    border-radius: 5rem;
+    font-weight: 600;
+}
+@media (max-width: 991.98px) {
+    .navbar{
+        border-radius: 40px;
+    }
+    .nav-link{
+        padding-left: 15px;
+    }
+    .navbar-nav{
+        padding-top: 10px;
+    }
+  }
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler-icon:focus-visible{
+    outline: none;
+}
+.navbar-toggler:focus-visible, .navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
