@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>             
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"> burger</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#dessert">dessert</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+            <a href="#order">order</a>
+        </nav>
+    
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+
+        <div class="shopping-cart">
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="images/cart1.png" alt="">
+                <div class="content">
+                    <h3>cheese burger</h3>
+                    <span class="price"> $11.99/-</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="images/cart2.png" alt="">
+                <div class="content">
+                    <h3>Bacon burger</h3>
+                    <span class="price"> $12.99/-</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="images/cart3.png" alt="">
+                <div class="content">
+                    <h3>classic burger</h3>
+                    <span class="price"> $13.99/-</span>
+                </div>
+            </div>
+
+            <div class="total">total: $50.99</div>
+            <a href="#" class="btn"> check out</a>
+
+        </div>
+
+    </header>
+    <section class="hero" id="hero">
+
+        <div class="swiper hero-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide" style="background: url(images/slider1_bg.jpg) no-repeat;">
+                    <div class="content">
+                        <img src="images/slider_icons.png" alt="">
+                        <h3>Flavorful <br> <span>burger</span> feast</h3>
+                        <a href="#" class="btn"> order now</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(images/slider2_bg.jpg) no-repeat;">
+                    <div class="content">
+                        <img src="images/slider_icons.png" alt="">
+                        <h3>order <br> <span>home</span> burgers </h3>
+                        <a href="#" class="btn"> order now</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="special" id="special">
+
+        <h1 class="heading">our <span> speciality</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/special1.jpg" alt="">
+                <h3>Special Cheese Burger</h3>
+                <p> The Special Cheese Burger features a Wagyu beef patty topped with aged cheddar and smoked gouda cheeses for a rich flavor. It includes crispy pancetta and sautéed mushrooms for added texture and aroma. Finished with a signature truffle aioli sauce, it offers a unique and indulgent dining experience, combining premium ingredients to satisfy every palate.</p>
+                <div class="price">$20.99 <span>$25.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box">
+                <img src="images/special1.jpg" alt="">
+                <h3>Mushroom Swiss Burger</h3>
+                <p>It's complemented by fresh lettuce and a creamy sauce, served on a toasted bun for added texture. This burger offers a gourmet twist with its balanced blend of earthy mushrooms and smooth cheese, making it a popular choice among our guests seeking a satisfying and indulgent dining experience. </p>
+                <div class="price">$20.99 <span>$25.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+        </div>
+
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
