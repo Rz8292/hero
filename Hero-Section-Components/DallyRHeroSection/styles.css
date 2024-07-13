@@ -1,0 +1,226 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #111;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: textSlideIn 2s ease-out forwards;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+    animation: textSlideIn 2s ease-out forwards 0.5s;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ff7e5f;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: buttonSlideIn 2s ease-out forwards 1s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background-color: #fcb03c;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes buttonSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-animations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.circle, .triangle, .square, .hexagon, .star, .ellipse {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    animation: float 10s infinite;
+    opacity: 0.6;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    animation-duration: 7s;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid rgba(255, 255, 255, 0.3);
+    top: 50%;
+    left: 70%;
+    animation-duration: 9s;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    top: 80%;
+    left: 30%;
+    animation-duration: 11s;
+}
+
+.hexagon {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 52px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    top: 30%;
+    left: 50%;
+    animation-duration: 8s;
+}
+
+.hexagon:before {
+    content: '';
+    position: absolute;
+    top: -26px;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 26px solid rgba(255, 255, 255, 0.3);
+}
+
+.star {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid rgba(255, 255, 255, 0.3);
+    top: 60%;
+    left: 80%;
+    animation-duration: 12s;
+}
+
+.star:before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid rgba(255, 255, 255, 0.3);
+}
+
+.ellipse {
+    width: 70px;
+    height: 35px;
+    border-radius: 50%;
+    top: 40%;
+    left: 90%;
+    animation-duration: 10s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.moving-text {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    animation: textWave 3s infinite alternate;
+}
+
+.moving-text p {
+    margin: 5px 0;
+    animation: textFade 2s infinite alternate;
+}
+
+@keyframes textWave {
+    0% { transform: translateX(-50%) translateY(0); }
+    100% { transform: translateX(-50%) translateY(-10px); }
+}
+
+@keyframes textFade {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
