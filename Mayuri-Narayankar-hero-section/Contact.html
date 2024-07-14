@@ -23,7 +23,7 @@
             padding: 0 8px;
         }
         .column {
-            flex: 1 1 21%; /* Adjust the basis value to change the column width */
+            flex: 1 1 21%; 
             max-width: 21%;
             margin: 8px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -66,7 +66,7 @@
             font-size: 50px;
             margin-bottom: 15px;
         }
-        /* Chatbox styling */
+       
         .chatbox {
             display: none;
             position: fixed;
@@ -168,19 +168,19 @@
     </div>
     
     
-    <!-- Chatbox Button -->
+   
     <button class="chat-button" onclick="toggleChatbox()">
         <i class="fas fa-comments"></i>
     </button>
 
-    <!-- Chatbox Section -->
+   
     <div class="chatbox" id="chatbox">
         <div class="chatbox-header">
             <span class="chatbox-close" onclick="toggleChatbox()">&times;</span>
             <h3>Chat with Us</h3>
         </div>
         <div class="chatbox-messages" id="chatbox-messages">
-            <!-- Messages will be displayed here -->
+          
         </div>
         <div class="chatbox-input">
             <textarea id="chat-input" placeholder="Type your message..."></textarea>
