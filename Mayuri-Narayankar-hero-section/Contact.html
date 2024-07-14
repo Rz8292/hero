@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 8px;
+        }
+        .column {
+            flex: 1 1 21%; /* Adjust the basis value to change the column width */
+            max-width: 21%;
+            margin: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 16px;
+            background-color: white;
+        }
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #fc282f;
+            color: white;
+        }
+      
+        .title {
+            color: rgb(128, 128, 128);
+        }
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        @media screen and (max-width: 650px) {
+            .column {
+                flex: 1 1 100%;
+                max-width: 100%;
+                display: block;
+            }
+        }
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        /* Chatbox styling */
+        .chatbox {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chatbox-header {
+            background-color: #1342ec;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .chatbox-close {
+            position:absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .chatbox-messages {
+            height: 200px;
+            overflow-y: scroll;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .chatbox-input {
+            display: flex;
+            border-top: 1px solid #ccc;
+        }
+        .chatbox-input textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            resize: none;
+        }
+        .chatbox-input button {
+            padding: 10px;
+            background-color: #1342ec;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1342ec;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .chat-button i {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-section">
+        <h1>Contact</h1>
+    </div>
+      
+    <h2 style="text-align:center">Connect With Us</h2>
+    <div class="row">
+        <div class="column">
+            <i class="fab fa-facebook icon"></i>
+            <h2>Facebook</h2>
+            <p><a href="https://facebook.com" target="_blank">facebook.com/yourpage</a></p>
+        </div>
+    
+        <div class="column">
+            <i class="fas fa-envelope icon"></i>
+            <h2>Email</h2>
+            <p>Email: info@example.com</p>
+        </div>
+    
+       
+        <div class="column">
+            <i class="fas fa-phone icon"></i>
+            <h2>Contact Us</h2>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </div>
+    
+    
+    <!-- Chatbox Button -->
+    <button class="chat-button" onclick="toggleChatbox()">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chatbox Section -->
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <span class="chatbox-close" onclick="toggleChatbox()">&times;</span>
+            <h3>Chat with Us</h3>
+        </div>
+        <div class="chatbox-messages" id="chatbox-messages">
+            <!-- Messages will be displayed here -->
+        </div>
+        <div class="chatbox-input">
+            <textarea id="chat-input" placeholder="Type your message..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChatbox() {
+            const chatbox = document.getElementById('chatbox');
+            if (chatbox.style.display === 'none' || chatbox.style.display === '') {
+                chatbox.style.display = 'block';
+            } else {
+                chatbox.style.display = 'none';
+            }
+        }
+
+        function sendMessage() {
+            const chatInput = document.getElementById('chat-input');
+            const chatMessages = document.getElementById('chatbox-messages');
+
+            if (chatInput.value.trim() !== "") {
+                const message = document.createElement('div');
+                message.textContent = chatInput.value;
+                message.style.padding = '10px';
+                message.style.margin = '10px 0';
+                message.style.backgroundColor = '#e1e1e1';
+                message.style.borderRadius = '5px';
+                
+                chatMessages.appendChild(message);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                chatInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
