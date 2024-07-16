@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Portfolio Hero Section</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero" id="home">
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <section id="skills" class="skills">
+          <h2>Skills & Services</h2>
+          <div class="skills-container">
+            <div class="skill-card">
+              <i class="fas fa-code skill-icon"></i>
+              <h3>Web Development</h3>
+              <p>HTML, CSS, JavaScript, React, Angular</p>
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-server skill-icon"></i>
+              <h3>Backend Development</h3>
+              <p>Node.js, Express, MongoDB, SQL</p>
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-paint-brush skill-icon"></i>
+              <h3>UI/UX Design</h3>
+              <p>Sketch, Figma, Adobe XD</p>
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-project-diagram skill-icon"></i>
+              <h3>Project Management</h3>
+              <p>Agile, Scrum, Jira</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="projects" class="section projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <img src="project1.jpg" alt="Project 1" />
+          <h3>Project 1</h3>
+          <p>Description of Project 1. This project involves...</p>
+        </div>
+        <div class="project-item">
+          <img src="project2.jpg" alt="Project 2" />
+          <h3>Project 2</h3>
+          <p>Description of Project 2. This project involves...</p>
+        </div>
+        <div class="project-item">
+          <img src="project3.jpg" alt="Project 3" />
+          <h3>Project 3</h3>
+          <p>Description of Project 3. This project involves...</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="section about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm [Your Name], a passionate [Your Profession] with expertise in
+        [Your Skills]. I love creating impactful and innovative solutions.
+        Welcome to my portfolio where I showcase some of my best work.
+      </p>
+    </div>
+
+    <div id="contact">
+      <div class="contact-container">
+        <div class="contact-left">
+          <h1>Connect With Me!</h1>
+        </div>
+        <div class="contact-right">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone number:</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+          <div id="formMessage" class="form-message"></div>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
