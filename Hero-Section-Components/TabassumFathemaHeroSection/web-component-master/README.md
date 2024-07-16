@@ -1,3 +1,11 @@
+## Full Name | Category | Deployed Link | Date | Tech Stack Used
+
+```mathematica
+Full Name             | Category      | Deployed Link                |    Date    | Tech Stack Used
+-------------------   | ------------- | -----------------------------|------------|----------------
+Tabassum Fathema Mirza| Hero Section  | [Link](http://surl.li/txfsiy)| 16-07-2024 | ReactJS
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
