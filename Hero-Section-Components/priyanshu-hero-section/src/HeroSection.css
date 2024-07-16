@@ -1,4 +1,5 @@
 /* src/HeroSection.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Global reset */
 * {
@@ -6,12 +7,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-  
+
 body, html {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif; /* Maintain Montserrat */
 }
-  
+
 .hero-container {
     position: relative;
     height: 100vh;
@@ -24,107 +25,145 @@ body, html {
     color: #fff;
     text-align: center;
 }
-  
+
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 2rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: #004080; /* Dark blue background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000;
 }
-  
+
 .logo-placeholder {
     font-size: 1.6rem;
     color: #fff;
 }
-  
+
 .menu-icon {
     display: none; /* Hidden by default */
     cursor: pointer;
     font-size: 1.5rem;
+    position: absolute; /* Absolute positioning */
+    right: 2rem; /* Adjust as needed */
+    color: #fff; /* White color */
 }
-  
+
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
 }
-  
+
 .nav-menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem; /* Added padding for touch targets */
-    border-radius: 5px;
-    transition: transform 0.3s ease; /* Remove background transition */
+    display: block; /* Make links block-level elements */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default underline */
+    font-weight: 300; /* Bold font */
+    padding: 5px; /* Increased padding for better touch area */
+    position: relative; /* Position relative for underline */
 }
-  
-.nav-menu li a:hover {
-    background: rgba(255, 204, 0, 0.8); /* Highlight color on hover */
-    transform: translateY(-2px); /* Subtle lift effect */
+
+.nav-menu li a::after {
+    content: ''; /* Empty content for underline */
+    display: block; /* Block level for the underline */
+    width: 100%; /* Full width underline */
+    height: 2px; /* Underline thickness */
+    background: #ffcc00; /* Underline color matching Grappl.tech's yellow */
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* Align at the bottom of the link */
+    left: 0; /* Start from the left */
+    transform: scaleX(0); /* Initially scale down to 0 */
+    transition: transform 0.3s ease; /* Smooth transition for hover */
 }
-  
+
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+    transform: scaleX(1); /* Scale to full width on hover or active */
+}
+
 .nav-menu.open {
-    display: flex; /* Show the dropdown menu */
-    flex-direction: column; /* Stack items vertically */
+    display: flex; /* Show dropdown menu */
+    flex-direction: column; /* Stack vertically */
+    align-items: flex-start; /* Align items to the left */
 }
-  
+
 .hero-content {
     max-width: 600px;
 }
-  
+
 .headline {
-    font-size: 3rem;
+    font-size: 3rem; /* Adjust size for prominence */
     margin-bottom: 1rem;
+    font-weight: 700; /* Bold for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    color: #004080; /* Dark blue text */
 }
-  
+
 .subheadline {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    font-weight: 400; /* Regular weight */
+    max-width: 600px; /* Limit width for better readability */
+    line-height: 1.5; /* Increase line height for clarity */
+    color: #004080; /* Dark blue text */
 }
-  
+
 .cta-button {
-    background: #007bff;
-    color: #fff;
+    background: #ffcc00; /* Grappl.tech's yellow */
+    color: #004080; /* Dark blue text */
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
+    font-weight: 700; /* Bold text */
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
-  
+
 .cta-button:hover {
-    background: #0056b3;
+    background: #ffc107; /* Slightly darker yellow */
+    color: #004080; /* Dark blue text */
 }
-  
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack menu items vertically on mobile */
         align-items: flex-start; /* Align to the left */
     }
-  
+
     .menu-icon {
         display: block; /* Show hamburger icon on mobile */
     }
-  
+
     .nav-menu {
         display: none; /* Hide menu by default on mobile */
     }
-  
+
+    .nav-menu li {
+        width: 100%; /* Ensure each item takes full width */
+    }
+
+    .nav-menu.open {
+        display: flex; /* Show the dropdown menu when open */
+        flex-direction: column; /* Stack items vertically */
+        margin-left: 30%;
+    }
+
     .headline {
         font-size: 2.5rem; /* Smaller headline on mobile */
     }
-  
+
     .subheadline {
         font-size: 1.2rem; /* Smaller subheadline on mobile */
     }
-  
+
     .cta-button {
         padding: 0.5rem 1rem; /* Smaller button padding on mobile */
     }
@@ -137,3 +176,23 @@ body, html {
         transform: none; /* Remove lift effect */
     }
 }
+
+/* navbar adjustment at 1144px for more responsiveness */
+@media (max-width: 1260px) {
+    .nav-menu li a {
+        color: #fff; /* Text color */
+        font-weight: 300; 
+        padding: 5px;
+        
+    }
+    .nav-menu{
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1060px) {
+ .navbar{
+    padding-right:  25px;
+ }
+}
+
