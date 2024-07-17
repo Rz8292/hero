@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    align-items: center;
+    background-color: #ffffff ;
+}
+#logo
+{
+    margin: auto;
+    position: relative;
+    bottom: 10px;
+    top: 5px;
+    background-size: cover;
+    padding: 20px;
+    padding-bottom: 25px;
+    width: 100px;
+    height: 100px;
+}
+.log-form
+{   
+    background-color: #001aaf;
+    margin: auto;
+    padding: 8px;
+    /* height: 328px; */
+    height: auto;
+    width: 375px;
+    align-items: center;
+    transition: box-shadow 0.5s;
+
+}
+.log-form:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#foram
+{
+    border: 4px solid black;
+    padding: 12px 12px;
+    padding-bottom: 50px;
+    /* height: 302px; */
+    height: auto;
+    width: px;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    animation-name: girgit;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes girgit {
+    0% {border-color: #35ff39; }
+    25% {border-color: #35ffd8; }
+    50% {border-color: #ff3541; }
+    100% {border-color: #3547ff;}
+}
+
+
+
+
+#logtext
+{
+    font-family: Roboto slab;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+}
+.data
+{
+    border-radius:4px;
+    height: 37px;
+    width:302px;
+    padding-left: 20px;
+    margin: 10px;
+    background-color:;
+}
+.rad
+{
+ margin-left: 12px;
+}
+label
+{
+    font-size: 18px;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#sub
+{   cursor: pointer;
+    position: relative;
+    top: 19px;
+    height: 0px;
+    width: 326px;
+    background-color: #000000;
+    padding: 19px;
+    color: rgb(240, 236, 236); 
+    padding-bottom: 10%;
+    left: 10px;
+    /* font-weight: 800; */
+    font-family: "Play", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 17px;
+    
+}
+#sub:hover
+{
+    background-color:#64615c;
+    
+}
+
+
+/*
+button
+{
+    background-color: #FC6736;
+     padding: 25px;
+     color: white;
+} */
