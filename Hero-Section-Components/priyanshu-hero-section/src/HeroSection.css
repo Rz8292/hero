@@ -1,4 +1,3 @@
-/* src/HeroSection.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Global reset */
@@ -10,14 +9,13 @@
 
 body, html {
     height: 100%;
-    font-family: 'Montserrat', Arial, sans-serif; /* Maintain Montserrat */
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .hero-container {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,8 +30,8 @@ body, html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
-    background: #004080; /* Dark blue background */
+    padding: 0.5rem 1rem; /* Adjusted padding */
+    background: #004080;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
@@ -44,53 +42,55 @@ body, html {
 }
 
 .menu-icon {
-    display: none; /* Hidden by default */
+    display: none;
     cursor: pointer;
     font-size: 1.5rem;
-    position: absolute; /* Absolute positioning */
-    right: 2rem; /* Adjust as needed */
-    color: #fff; /* White color */
+    position: absolute;
+    right: 2rem;
+    color: #fff;
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
+    margin: 0; /* Removed top margin */
     justify-content: center;
     align-items: center;
-    margin-left: 25%;
+    flex-wrap: wrap; /* Allows wrapping of menu items */
 }
 
 .nav-menu li a {
-    display: block; /* Make links block-level elements */
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove default underline */
-    font-weight: 300; /* Bold font */
-    padding: 5px; /* Increased padding for better touch area */
-    position: relative; /* Position relative for underline */
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem; /* Reduced padding */
+    position: relative;
+    font-size: 0.9rem; /* Reduced font size */
 }
 
 .nav-menu li a::after {
-    content: ''; /* Empty content for underline */
-    display: block; /* Block level for the underline */
-    width: 100%; /* Full width underline */
-    height: 2px; /* Underline thickness */
-    background: #ffcc00; /* Underline color matching Grappl.tech's yellow */
-    position: absolute; /* Absolute positioning */
-    bottom: 0; /* Align at the bottom of the link */
-    left: 0; /* Start from the left */
-    transform: scaleX(0); /* Initially scale down to 0 */
-    transition: transform 0.3s ease; /* Smooth transition for hover */
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ffcc00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
-.nav-menu li a:hover::after,
-.nav-menu li a.active::after {
-    transform: scaleX(1); /* Scale to full width on hover or active */
+.nav-menu li a.active::after,
+.nav-menu li a:hover::after {
+    transform: scaleX(1);
 }
 
 .nav-menu.open {
-    display: flex; /* Show dropdown menu */
-    flex-direction: column; /* Stack vertically */
-    align-items: flex-start; /* Align items to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero-content {
@@ -98,101 +98,92 @@ body, html {
 }
 
 .headline {
-    font-size: 3rem; /* Adjust size for prominence */
+    font-size: 3rem;
     margin-bottom: 1rem;
-    font-weight: 700; /* Bold for emphasis */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-    color: #004080; /* Dark blue text */
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #004080;
 }
 
 .subheadline {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    font-weight: 400; /* Regular weight */
-    max-width: 600px; /* Limit width for better readability */
-    line-height: 1.5; /* Increase line height for clarity */
-    color: #004080; /* Dark blue text */
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 1.5;
+    color: #004080;
 }
 
 .cta-button {
-    background: #ffcc00; /* Grappl.tech's yellow */
-    color: #004080; /* Dark blue text */
+    background: #ffcc00;
+    color: #004080;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    font-weight: 700; /* Bold text */
+    font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #ffc107; /* Slightly darker yellow */
-    color: #004080; /* Dark blue text */
+    background: #ffc107;
+    color: #004080;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Just below the navbar */
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack menu items vertically on mobile */
-        align-items: flex-start; /* Align to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .menu-icon {
-        display: block; /* Show hamburger icon on mobile */
+        display: block;
     }
 
     .nav-menu {
-        display: none; /* Hide menu by default on mobile */
+        display: none;
     }
 
     .nav-menu li {
-        width: 100%; /* Ensure each item takes full width */
+        width: 100vw;
     }
 
     .nav-menu.open {
-        display: flex; /* Show the dropdown menu when open */
-        flex-direction: column; /* Stack items vertically */
-        margin-left: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .headline {
-        font-size: 2.5rem; /* Smaller headline on mobile */
+        font-size: 2.5rem;
     }
 
     .subheadline {
-        font-size: 1.2rem; /* Smaller subheadline on mobile */
+        font-size: 1.2rem;
     }
 
     .cta-button {
-        padding: 0.5rem 1rem; /* Smaller button padding on mobile */
+        padding: 0.5rem 1rem;
     }
 }
 
 /* Disable hover effect on larger screens */
 @media (min-width: 769px) {
     .nav-menu li a:hover {
-        background: none; /* Remove background change on hover */
-        transform: none; /* Remove lift effect */
+        background: none;
+        transform: none;
     }
 }
-
-/* navbar adjustment at 1144px for more responsiveness */
-@media (max-width: 1260px) {
-    .nav-menu li a {
-        color: #fff; /* Text color */
-        font-weight: 300; 
-        padding: 5px;
-        
-    }
-    .nav-menu{
-        margin-left: 15%;
-    }
-}
-
-@media (max-width: 1060px) {
- .navbar{
-    padding-right:  25px;
- }
-}
-
