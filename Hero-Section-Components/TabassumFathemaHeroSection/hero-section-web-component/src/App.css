@@ -1,0 +1,47 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  background-color: #09576d;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.header-image {
+  max-width: 300px; /* Adjust the size as needed */
+  margin: 20px 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.feature {
+  border: 1px solid #b71616;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.feature:hover {
+  background-color: #e0e0e0;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.coming-soon {
+  background-color: #4ced9a;
+  border: 1px solid #140e01;
+  border-radius: 8px;
+  padding: 20px;
+}
