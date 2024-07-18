@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__left">
+                <a href="#" id="navbar__logo">
+                    <img src="profile_picture.png" alt="Profile Picture" class="profile-picture"> <!--ADD YOUR PROFILE PICTURE HERE-->
+                </a>
+                <p class="navbar__name">John Doe</p> <!-- Replace "Your Name" with your actual name -->
+            </div>
+    
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Projects.pdf" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/skills" class="navbar__links">Skills</a><!--HERE WE CAN CREATE A GOOD JPG/PNG FILE DESCRBING OUR SKILLS -->
+                </li>
+                <li class="navbar__btn">
+                    <a href="/resume.pdf" class="button">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Animated Text Strip with Contact Button -->
+    <div class="animated-strip">
+        <div class="animated-text">
+            <p class="first-line">When You Need A Jack Of All Trades....</p>
+            <p class="second-line">John Doe</p>
+            <p class="third-line">Full Stack Developer | Student at CBIT Hyderabad | AWS and Azure Certified Professional</p>
+        </div>
+        <a href="mailto:your-email@example.com" class="contact-btn">Contact</a> <!--REPLACE WITH YOUR MAIL-->
+    </div>
+    
+
+    <!-- Certifications Strip -->
+    <div class="certifications-strip">
+        <h2>My Certifications:</h2>
+        <div class="certifications-container">
+            <div class="certifications-container-inner">
+                <!-- ADD YOUR CERTIFICATE IMAGES HERE -->
+                <img src="cert1.png" alt="Certification 1" class="certificate">
+                <img src="cert2.png" alt="Certification 2" class="certificate">
+                <img src="cert5.png" alt="Certification 3" class="certificate">
+                <img src="cert4.png" alt="Certification 4" class="certificate">
+                <img src="cert3.jpg" alt="Certification 5" class="certificate">
+                <img src="cert6.png" alt="Certification 6" class="certificate">
+                <img src="cert7.png" alt="Certification 7" class="certificate">
+                <img src="cert6.png" alt="Certification 8" class="certificate">
+                <img src="cert9.png" alt="Certification 9" class="certificate">
+                <img src="cert10.png" alt="Certification 10" class="certificate">
+            </div>
+        </div>
+    </div>
+    <!-- Certifications Strip -->
+
+<!-- New Sections -->
+<!-- Sections Container -->
+<div class="sections-container">
+    <!-- Internship Section -->
+    <a href="internships.pdf" class="strip internship-strip">
+        <div class="section-number">2</div>
+        <h2>Internships</h2>
+    </a>
+
+    <!-- Projects Section -->
+    <a href="Projects.pdf" class="strip projects-strip">
+        <div class="section-number">2</div>
+        <h2>Professional Affiliations</h2>
+    </a>
+
+    <!-- Research Papers Section -->
+    <a href="Reseachpapers.pdf" class="strip research-papers-strip">
+        <div class="section-number">4</div>
+        <h2>Research Papers</h2>
+    </a>
+
+    <!-- Badges Section -->
+    <a href="badges.pdf" class="strip badges-strip">
+        <div class="section-number">5</div>
+        <h2>Badges</h2>
+    </a>
+</div>
+<!-- Social Media Links -->
+<div class="social-media-links">
+    <a href="https://github.com/your-username" target="_blank">
+        <img src="github_logo.jpg" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/your-username" target="_blank">
+        <img src="linkedin_logo.png" alt="LinkedIn">
+    </a>
+</div>
+<!-- Work Experience Section -->
+<section class="my_working_exp">
+    <h2>Work Experience</h2>
+
+    <!-- Work Entry 1 -->
+    <div class="work-entry">
+        <h3 class="job-title">Software Developer Intern</h3>
+        <p class="job-date">June 2023 - August 2023</p>
+        <p class="job-description">XYZ Tech Solutions, Hyderabad, India</p>
+        <ul>
+            <li>Developed front-end components using React.js.</li>
+            <li>Assisted in database design and backend development.</li>
+        </ul>
+    </div>
+
+    <!-- Work Entry 2 -->
+    <div class="work-entry">
+        <h3 class="job-title">Web Developer</h3>
+        <p class="job-date">January 2022 - May 2022</p>
+        <p class="job-description">ABC Web Services, Bangalore, India</p>
+        <ul>
+            <li>Created responsive web designs using HTML, CSS, and JavaScript.</li>
+            <li>Collaborated with designers to implement UI/UX improvements.</li>
+        </ul>
+    </div>
+</section>
+<!-- Modal for Full Image -->
+<div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+ </div>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelector('.navbar__menu');
+
+        mobileMenu.addEventListener('click', function() {
+            menuLinks.classList.toggle('active');
+        });
+        // Modal functionality for certificates
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var certificates = document.getElementsByClassName("certificate");
+
+for (var i = 0; i < certificates.length; i++) {
+    certificates[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+        // Modal functionality
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var certificates = document.getElementsByClassName("certificate");
+
+        for (var i = 0; i < certificates.length; i++) {
+            certificates[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+    <script>
+        // Modal functionality
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var profilePicture = document.querySelector(".profile-picture");
+    
+        profilePicture.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src; 
+            captionText.innerHTML = this.alt; // Using alt text as caption
+        }
+    
+        var span = document.getElementsByClassName("close")[0];
+    
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
