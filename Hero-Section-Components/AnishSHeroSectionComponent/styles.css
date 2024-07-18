@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 0;
+    color: #fff;
+    position: fixed;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+nav header {
+    color: #fff;
+    font-weight: 900;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #04AA6D;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+#section1 {
+    background: url('https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1540') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #6a11cb, #2575fc);
+    box-shadow: 10px 10px 10px #6a11cb;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    color: #a0b5d5;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #bfa7d5;
+    margin-bottom: 20px;
+}
+
+.home-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #6cb0e3;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.home-content button:hover {
+    background-color: #e55342;
+}
+
+.about-content, .services-content, .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.about-content h2, .services-content h2, .contact-content h2 {
+    background-color: #04AA6D;
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-shadow: 3px 3px 3px white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.about-content p, .services-content p, .contact-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-features, .service-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.feature, .service-item {
+    border: 2px solid #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature:hover, .service-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.feature h3, .service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.feature p, .service-item p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.service-item button {
+    background-color: #bbb8e6;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #1e1e1e;
+}
+
+.service-item button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-item button:hover {
+    background-color: #b583e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+.contact-content form button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.contact-content form button:hover {
+    background-color: #038f5d;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    nav ul {
+        margin-top: 10px;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .about-features,
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature,
+    .service-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .home-content h2 {
+        font-size: 36px;
+    }
+    .home-content p {
+        font-size: 16px;
+    }
+}

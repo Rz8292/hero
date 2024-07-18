@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>My Dynamic Website</header>
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About</a></li>
+            <li><a href="#section3">Services</a></li>
+            <li><a href="#section4">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="section1">
+        <div class="home-content">
+            <h2>Welcome to My Website</h2>
+            <p>Discover our amazing services and offerings. Dive in to learn more!</p>
+            <button onclick="exploreCourses()">Explore Courses</button>
+        </div>
+    </section>
+    
+    <section id="section2">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>We are committed to providing the best services to our customers. Learn more about what we do and how we do it.</p>
+            <div class="about-features">
+                <div class="feature">
+                    <h3>Quality Services</h3>
+                    <p>We offer top-notch services tailored to your needs.</p>
+                </div>
+                <div class="feature">
+                    <h3>Experienced Team</h3>
+                    <p>Our team consists of industry experts with years of experience.</p>
+                </div>
+                <div class="feature">
+                    <h3>Customer Support</h3>
+                    <p>We provide 24/7 support to all our customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="section3">
+        <div class="services-content">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Consulting</h3>
+                    <p>Get expert advice from our team.</p>
+                    <button><a href="/">Learn More</a></button>
+                </div>
+                <div class="service-item">
+                    <h3>Development</h3>
+                    <p>High-quality development services for your business.</p>
+                    <button><a href="/">Learn More</a></button>
+                </div>
+                <div class="service-item">
+                    <h3>Design</h3>
+                    <p>Creative design solutions for your brand.</p>
+                    <button><a href="/">Learn More</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="section4">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Have any questions or need further information? Feel free to reach out to us.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Ex: John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
