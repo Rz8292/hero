@@ -64,6 +64,7 @@ Please add your details to the table below after your pull request has been merg
 | Full Name       | Category      | Deployed Link | Date       | Tech Stack Used |
 | --------------- | ------------- | --------------|------------|-----------------|
 | Akhul  | Hero Section | www.example.com   | 19-06-2024 | HTML, CSS, JS   |
+|VIKAS   | HERO SECTION |                   |18-07-2024  | REACT JS        |
 
 ## Example Entry
 | Full Name       | Category      | Deployed Link | Date       | Tech Stack Used |
