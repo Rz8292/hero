@@ -1,0 +1,19 @@
+/* index.css */
+
+/* Ensure Tailwind base styles are included */
+@tailwind base;
+
+/* Customize Tailwind utility classes as needed */
+@tailwind components;
+
+/* Apply your own custom styles */
+@tailwind utilities;
+
+/* Additional global styles */
+body {
+  font-family: 'Roboto', sans-serif; /* Example of customizing font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
