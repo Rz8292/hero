@@ -1,0 +1,344 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: poppins;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+}
+
+/*----------------------------------navigation area-----------------------------------------------*/
+.nav {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 200, 255, 1) 100%);
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+}
+
+/*-------logo----------*/
+.Portfolio {
+    width: 20%;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    color: white;
+    animation: slideIn 4s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        right: -30%;
+        opacity: 0;
+    }
+
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+/*----------navigation bar----------*/
+.navigation {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    width: 50%;
+    margin-left: 200px;
+    height: 50px;
+}
+
+.navigation a {
+    font-size: 15px;
+    z-index: 1;
+    text-decoration: none;
+   text-transform: capitalize;
+    text-align: center;
+    transition: all ease-in-out, transform 1s ease;
+    padding: 15px;
+    margin-left: 18px;
+    color: white;
+    font-weight: bolder;
+    opacity: 0;
+    position: relative;
+    animation: slide-ups 1s ease-out forwards;
+}
+
+@keyframes slide-ups {
+    from {
+        bottom: -70px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1;
+
+    }
+}
+
+.navigation a:hover {
+    
+    color: black;
+}
+
+/*------navigation animation---*/
+.navigation .animation {
+    margin-top: 0px;
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    opacity: 0;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease-in-out;
+    border-radius: 5px;
+    background-color:#12a082;
+    /* Default color */
+    animation: fadein1 2.5s ease-in-out forwards;
+    transform: scale(0);
+}
+
+@keyframes fadein1 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+
+    }
+}
+
+a:nth-child(1) {
+    width: 50px;
+}
+
+a:nth-child(2) {
+    width: 50px;
+}
+
+a:nth-child(3) {
+    width: 60px;
+}
+
+a:nth-child(4) {
+    width: 70px;
+}
+
+a:nth-child(5) {
+    width: 80px;
+}
+
+.navigation .start-home,
+a:nth-child(1):hover~.animation {
+    width: 100px;
+    right: 580px;
+    background-color: #24c2a3;
+}
+
+.navigation .start-about,
+a:nth-child(2):hover~.animation {
+    width: 100px;
+    right: 23.9em;
+    background-color: #e74c3c;
+}
+
+.navigation .start-skills,
+a:nth-child(3):hover~.animation {
+    width: 100px;
+    right: 19em;
+    background-color:red;
+}
+
+.navigation .start-projects,
+a:nth-child(4):hover~.animation {
+    width: 140px;
+    right: 243px;
+    background-color: brown;
+}
+
+.navigation .start-contact,
+a:nth-child(5):hover~.animation {
+    width: 130px;
+    right: 125px;
+    background-color: purple;
+}
+
+/*----------------------------------hero-section---------------------------------------------*/
+.herosection {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 4, 7, 800) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: black;
+
+}
+
+/*---------introduction area---------*/
+.intro {
+    color: #fff;
+    align-items: flex-start;
+    margin-left: 60px;
+    width: 500px;
+    border-radius: 40px;
+    color: #fff;
+    align-items: flex-start;
+    margin-left: 60px;
+    width: 500px;
+    /*border-left: 5px solid green;*/
+    border-radius: 40px;
+    padding: 20px;
+
+}
+
+/*----------- introduction paragraph's css*---------*/
+#one {
+    text-transform: capitalize;
+    position: relative;
+    opacity: 0;
+    animation: slide-up 3s ease-out forwards;
+    color: white;
+}
+
+@keyframes slide-up {
+    from {
+        top: -80px;
+        opacity: 0;
+    }
+
+    to {
+        top: 10px;
+        opacity: 1;
+
+    }
+}
+
+#two {
+    font-size: 45px;
+    text-transform: capitalize;
+    color: white;
+
+    background-size: 200% 100%;
+    font-weight: 1000;
+}
+
+#three {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+#four {
+    line-height: 30px;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFD700;
+}
+
+#five {
+    margin-top: 83px;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+#p2 {
+    margin: 0px 0px 0px 50px;
+    color: rgba(255, 228, 196, 0.447);
+    text-transform: capitalize;
+}
+
+#p1 {
+    margin: 50px 0px 0px 50px;
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 800;
+    color: white;
+    background-color: black;
+    z-index: 2;
+}
+
+/*--------------image or logo area--------------------*/
+
+.imgsection {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+img {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    margin-right: 3em;
+    top: 20vh;
+    border-radius: 60px 100px / 70px;
+    animation: slideIn 4s forwards;
+    filter: drop-shadow(10px 10px 20px blue);
+    box-shadow: 20px 20px 60px gray, inset -20px -20px 60px rgb(31, 9, 9);
+}
+
+/*----------buttons area-------------*/
+.intro .button-row {
+    padding: 30px 0px;
+
+}
+
+.button1 {
+    margin: 15px 30px 0px 0px;
+    width: 30%;
+    height: 35px;
+    border-radius: 4px;
+    border-color: #007bff;
+    background-color: #1a09ea61;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color 2s ease, background-color 2s ease, box-shadow 1s ease, border-radius 7s ease;
+    position: relative;
+    bottom: -200px;
+    opacity: 0;
+    animation: slides-up 4s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slides-up {
+    to {
+        bottom: 10px;
+        opacity: 1;
+
+    }
+}
+
+.button-row .button1 a {
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.button1:hover {
+    border-color: #06ed34;
+    border-radius: 20px;
+    background-color: #490e51;
+    box-shadow: blue -8px 10px 20px 0px;
+
+}
