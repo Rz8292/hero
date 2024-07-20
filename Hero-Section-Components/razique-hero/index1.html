@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        .hero {
+            background-color: #f0f0f0;
+            padding: 100px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 100px; 
+            height: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+       
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer span {
+            display: block;
+            margin-top: 10px;
+        }
+
+       
+        .carousel {
+            display: flex;
+            justify-content: center;
+            gap: 80px; 
+            margin-top: 20px;
+            overflow-x: auto; 
+            scrollbar-width: none; 
+            -ms-overflow-style: none; 
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none; 
+        }
+
+        .carousel-cell {
+            flex: 0 0 auto; 
+            text-align: center;
+            width: 200px; 
+        }
+
+        .carousel-cell img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10px; 
+        }
+
+        .carousel-cell h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Welcome to Our FOOD Website</h1>
+        <p>Welcome to Food Delight, where passion meets flavors! We are dedicated to bringing you the finest dining experience with our carefully curated dishes and delightful recipes. Whether you're craving comfort food or exploring exotic cuisines, our diverse menu caters to every palate. Our commitment to quality ingredients and culinary expertise ensures each bite is a celebration of taste. Join us on a journey of gastronomic delight, where every meal tells a story of freshness and innovation. At Food Delight, we strive to create memorable dining experiences that leave you craving for more.</p>
+    </div>
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell">
+            <img src="pizza.png" alt="Pizza">
+            <h3>Pizza</h3>
+        </div>
+        <div class="carousel-cell">
+            <img src="noodle.png" alt="Noodles">
+            <h3>Noodles</h3>
+        </div>
+        <div class="carousel-cell">
+            <img src="bread.png" alt="Bread">
+            <h3>Bread</h3>
+        </div>
+    </div>
+    <a href="#" class="btn">ORDER NOW!</a>
+</section>
+
+<footer>
+    <a href="#">FAQ</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Refund Policy</a>
+    <span>&copy; 2023 | Food Website Page</span>
+</footer>
+
+</body>
+</html>
